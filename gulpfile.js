@@ -1,33 +1,30 @@
-// Special thanks to oscar-g (https://github.com/oscar-g) for starting this at
-// https://github.com/oscar-g/patternlab-node/tree/dev-gulp
-
+/******************************************************
+ * DESCRIPTION
+ * Special thanks to oscar-g (https://github.com/oscar-g) for starting this at https://github.com/oscar-g/patternlab-node/tree/dev-gulp
+******************************************************/
 var pkg = require('./package.json'),
     gulp = require('gulp'),
     path = require('path'),
-    eol = require('os').EOL,
     del = require('del'),
-    strip_banner = require('gulp-strip-banner'),
-    header = require('gulp-header'),
-    nodeunit = require('gulp-nodeunit'),
-    eslint = require('gulp-eslint'),
     browserSync = require('browser-sync').create();
 
 require('gulp-load')(gulp);
-var banner = [ '/** ',
-  ' * <%= pkg.name %> - v<%= pkg.version %> - <%= today %>',
-  ' * ',
-  ' * <%= pkg.author %>, and the web community.',
-  ' * Licensed under the <%= pkg.license %> license.',
-  ' * ',
-  ' * Many thanks to Brad Frost and Dave Olsen for inspiration, encouragement, and advice.',
-  ' * ', ' **/'].join(eol);
+
+/******************************************************
+ * PATTERN LAB CONFIGURATION
+******************************************************/
+//read all paths from our namespaced config file
+var config = require('./patternlab-config.json'),
+    pl = require('patternlab-node')(config);
 
 function paths() {
-  return require('./patternlab-config.json').paths;
+  return config.paths;
 }
 
-//load patternlab-node tasks
-gulp.loadTasks(__dirname + '/core/lib/patternlab_gulp.js');
+gulp.task('patternlab', ['prelab'], function (done) {
+  pl.build(true);
+  done();
+});
 
 //clean patterns dir
 gulp.task('clean', function(cb){
@@ -35,33 +32,9 @@ gulp.task('clean', function(cb){
   cb();
 });
 
-//build the banner
-gulp.task('banner', function(){
-  return gulp.src([
-    './core/lib/patternlab.js',
-    './core/lib/object_factory.js',
-    './core/lib/lineage_hunter.js',
-    './core/lib/media_hunter.js',
-    './core/lib/patternlab_grunt.js',
-    './core/lib/patternlab_gulp.js',
-    './core/lib/parameter_hunter.js',
-    './core/lib/pattern_exporter.js',
-    './core/lib/pattern_assembler.js',
-    './core/lib/pseudopattern_hunter.js',
-    './core/lib/list_item_hunter.js',
-    './core/lib/style_modifier_hunter.js'
-  ])
-    .pipe(strip_banner())
-    .pipe(header( banner, {
-      pkg : pkg,
-      today : new Date().getFullYear() }
-    ))
-    .pipe(gulp.dest('./core/lib'));
-});
-
-
-// COPY TASKS
-
+/******************************************************
+ * COPY TASKS
+******************************************************/
 // JS copy
 gulp.task('cp:js', function(){
   return gulp.src('**/*.js', {cwd: path.resolve(paths().source.js)} )
@@ -105,8 +78,9 @@ gulp.task('cp:styleguide', function(){
 });
 
 
-// server and watch tasks
-
+/******************************************************
+ * SERVER AND WATCH TASKS
+******************************************************/
 // watch task utility functions
 function getSupportedTemplateExtensions() {
   var engines = require('./core/lib/pattern_engines/pattern_engines');
@@ -160,21 +134,6 @@ gulp.task('connect', ['lab'], function() {
   gulp.watch(patternWatches, ['lab-pipe'], function () { browserSync.reload(); });
 });
 
-//lint
-gulp.task('eslint', function () {
-  return gulp.src(['./core/lib/*.js', '!node_modules/**'])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
-
-//unit test
-gulp.task('nodeunit', function(){
-  return gulp.src('./test/**/*_tests.js')
-    .pipe(nodeunit());
-});
-
-
 gulp.task('lab-pipe', ['lab'], function(cb){
   cb();
   browserSync.reload();
@@ -187,7 +146,6 @@ gulp.task('prelab', ['clean', 'assets']);
 gulp.task('lab', ['prelab', 'patternlab'], function(cb){cb();});
 gulp.task('patterns', ['patternlab:only_patterns']);
 gulp.task('serve', ['lab', 'connect']);
-gulp.task('build', ['eslint', 'nodeunit', 'banner']);
 
 gulp.task('version', ['patternlab:version']);
 gulp.task('help', ['patternlab:help']);
