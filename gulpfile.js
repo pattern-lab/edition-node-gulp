@@ -83,7 +83,7 @@ gulp.task('cp:styleguide', function(){
 ******************************************************/
 // watch task utility functions
 function getSupportedTemplateExtensions() {
-  var engines = require('./core/lib/pattern_engines/pattern_engines');
+  var engines = require('./node_modules/patternlab-node/core/lib/pattern_engines/pattern_engines');
   return engines.getSupportedFileExtensions();
 }
 function getTemplateWatches() {
