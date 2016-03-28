@@ -27,7 +27,7 @@ gulp.task('patternlab', ['prelab'], function (done) {
 });
 
 //clean patterns dir
-gulp.task('clean', function(cb){
+gulp.task('pl-clean', function(cb){
   del.sync([path.resolve(paths().public.patterns, '*')], {force: true});
   cb();
 });
@@ -36,13 +36,13 @@ gulp.task('clean', function(cb){
  * COPY TASKS
 ******************************************************/
 // JS copy
-gulp.task('cp:js', function(){
+gulp.task('pl-copy:js', function(){
   return gulp.src('**/*.js', {cwd: path.resolve(paths().source.js)} )
     .pipe(gulp.dest(path.resolve(paths().public.js)));
 });
 
 // Images copy
-gulp.task('cp:img', function(){
+gulp.task('pl-copy:img', function(){
   return gulp.src(
     [ '**/*.gif', '**/*.png', '**/*.jpg', '**/*.jpeg'  ],
     {cwd: path.resolve(paths().source.images)} )
@@ -50,26 +50,26 @@ gulp.task('cp:img', function(){
 });
 
 // Fonts copy
-gulp.task('cp:font', function(){
+gulp.task('pl-copy:font', function(){
   return gulp.src('*', {cwd: path.resolve(paths().source.fonts)})
     .pipe(gulp.dest(path.resolve(paths().public.fonts)));
 });
 
 // Data copy
-gulp.task('cp:data', function(){
+gulp.task('pl-copy:data', function(){
   return gulp.src('annotations.js', {cwd: path.resolve(paths().source.data)})
     .pipe(gulp.dest(path.resolve(paths().public.data)));
 });
 
 // CSS Copy
-gulp.task('cp:css', function(){
+gulp.task('pl-copy:css', function(){
   return gulp.src(path.resolve(paths().source.css, 'style.css'))
     .pipe(gulp.dest(path.resolve(paths().public.css)))
     .pipe(browserSync.stream());
 });
 
 // Styleguide Copy
-gulp.task('cp:styleguide', function(){
+gulp.task('pl-copy:styleguide', function(){
   return gulp.src(
       ['**/*'],
       {cwd: path.resolve(paths().source.styleguide)})
@@ -120,9 +120,9 @@ gulp.task('connect', ['lab'], function() {
       ]
     }
   });
-  gulp.watch(path.resolve(paths().source.css, '**/*.css'), ['cp:css']);
+  gulp.watch(path.resolve(paths().source.css, '**/*.css'), ['pl-copy:css']);
 
-  gulp.watch(path.resolve(paths().source.styleguide, '**/*.*'), ['cp:styleguide']);
+  gulp.watch(path.resolve(paths().source.styleguide, '**/*.*'), ['pl-copy:styleguide']);
 
   var patternWatches = [
     path.resolve(paths().source.patterns, '**/*.json'),
@@ -141,8 +141,8 @@ gulp.task('lab-pipe', ['lab'], function(cb){
 
 gulp.task('default', ['lab']);
 
-gulp.task('assets', ['cp:js', 'cp:img', 'cp:font', 'cp:data', 'cp:css', 'cp:styleguide' ]);
-gulp.task('prelab', ['clean', 'assets']);
+gulp.task('assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:font', 'pl-copy:data', 'pl-copy:css', 'pl-copy:styleguide' ]);
+gulp.task('prelab', ['pl-clean', 'assets']);
 gulp.task('lab', ['prelab', 'patternlab'], function(cb){cb();});
 gulp.task('patterns', ['patternlab:only_patterns']);
 gulp.task('serve', ['lab', 'connect']);
