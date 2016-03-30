@@ -92,7 +92,7 @@ function getTemplateWatches() {
   });
 }
 
-gulp.task('connect', ['lab'], function() {
+gulp.task('pl-connect', ['lab'], function() {
   browserSync.init({
     server: {
       baseDir: path.resolve(paths().public.root)
@@ -145,7 +145,7 @@ gulp.task('assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:font', 'pl-copy:data'
 gulp.task('prelab', ['pl-clean', 'assets']);
 gulp.task('lab', ['prelab', 'patternlab'], function(cb){cb();});
 gulp.task('patterns', ['patternlab:only_patterns']);
-gulp.task('serve', ['lab', 'connect']);
+gulp.task('pl-serve', ['lab', 'pl-connect']);
 
 gulp.task('version', ['patternlab:version']);
 gulp.task('help', ['patternlab:help']);
