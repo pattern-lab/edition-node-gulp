@@ -4,7 +4,7 @@
       "root": "./source/",
       "patterns" : "./source/_patterns/",
       "data" : "./source/_data/",
-      "styleguide" : "./node_modules/styleguidekit-assets-default/dist",
+      "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
       "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
       "js" : "./source/js",
       "images" : "./source/images",
@@ -14,7 +14,8 @@
     "public" : {
       "root" : "./public/",
       "patterns" : "./public/patterns/",
-      "data" : "./public/data/",
+      "data" : "./public/styleguide/data/",
+      "annotations" : "./public/annotations/",
       "styleguide" : "./public/styleguide/",
       "js" : "./public/js",
       "images" : "./public/images",
@@ -29,7 +30,7 @@
   "defaultPattern": "all",
   "ignored-extensions" : ["scss", "DS_Store", "less"],
   "ignored-directories" : ["scss"],
-  "debug": true,
+  "debug": false,
   "ishControlsHide": {
     "s": false,
     "m": false,
