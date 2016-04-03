@@ -56,7 +56,7 @@
     "organisms-sticky-comment" : "inreview",
     "templates-article" : "complete"
   },
-  "patternExportKeys": [],
+  "patternExportPatternPartials": [],
   "patternExportDirectory": "./pattern_exports/",
   "baseurl" : "",
   "cacheBust": true
