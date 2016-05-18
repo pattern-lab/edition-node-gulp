@@ -9,9 +9,9 @@
     "gulp-load": "^0.1.1",
     "handlebars": "^4.0.5",
     "mustache": "^2.2.1",
-    "patternlab-node": "pattern-lab/patternlab-node#styleguide-integration",
-    "styleguidekit-assets-default": "pattern-lab/styleguidekit-assets-default#dev",
-    "styleguidekit-mustache-default": "pattern-lab/styleguidekit-mustache-default#dev-node",
+    "patternlab-node": "pattern-lab/patternlab-node#dev-2.0-core",
+    "styleguidekit-assets-default": "pattern-lab/styleguidekit-assets-default#feature-panels",
+    "styleguidekit-mustache-default": "pattern-lab/styleguidekit-mustache-default#feature-panels",
     "twig": "^0.8.9",
     "underscore": "^1.8.3"
   },
