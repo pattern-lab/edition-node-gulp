@@ -70,11 +70,9 @@ gulp.task('pl-copy:css', function(){
 
 // Styleguide Copy
 gulp.task('pl-copy:styleguide', function(){
-  return gulp.src(
-      ['**/*'],
-      {cwd: path.resolve(paths().source.styleguide)})
-      .pipe(gulp.dest(path.resolve(paths().public.styleguide)))
-      .pipe(browserSync.stream());
+  return gulp.src(path.resolve(paths().source.styleguide, '**/*'))
+    .pipe(gulp.dest(path.resolve(paths().public.root)))
+    .pipe(browserSync.stream());
 });
 
 
