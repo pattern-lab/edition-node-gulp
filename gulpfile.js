@@ -70,11 +70,9 @@ gulp.task('pl-copy:css', function(){
 
 // Styleguide Copy
 gulp.task('pl-copy:styleguide', function(){
-  return gulp.src(
-      ['**/*'],
-      {cwd: path.resolve(paths().source.styleguide)})
-      .pipe(gulp.dest(path.resolve(paths().public.styleguide)))
-      .pipe(browserSync.stream());
+  return gulp.src(path.resolve(paths().source.styleguide, '**/*'))
+    .pipe(gulp.dest(path.resolve(paths().public.root)))
+    .pipe(browserSync.stream());
 });
 
 
@@ -83,7 +81,7 @@ gulp.task('pl-copy:styleguide', function(){
 ******************************************************/
 // watch task utility functions
 function getSupportedTemplateExtensions() {
-  var engines = require('./node_modules/patternlab-node/core/lib/pattern_engines/pattern_engines');
+  var engines = require('./node_modules/patternlab-node/core/lib/pattern_engines');
   return engines.getSupportedFileExtensions();
 }
 function getTemplateWatches() {
