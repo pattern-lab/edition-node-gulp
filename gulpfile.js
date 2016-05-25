@@ -49,6 +49,12 @@ gulp.task('pl-copy:img', function(){
     .pipe(gulp.dest(path.resolve(paths().public.images)));
 });
 
+// Favicon copy
+gulp.task('pl-copy:favicon', function(){
+  return gulp.src('favicon.ico', {cwd: path.resolve(paths().source.root)} )
+    .pipe(gulp.dest(path.resolve(paths().public.root)));
+});
+
 // Fonts copy
 gulp.task('pl-copy:font', function(){
   return gulp.src('*', {cwd: path.resolve(paths().source.fonts)})
@@ -140,7 +146,7 @@ gulp.task('lab-pipe', ['lab'], function(cb){
 
 gulp.task('default', ['lab']);
 
-gulp.task('assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:font', 'pl-copy:data', 'pl-copy:css', 'pl-copy:styleguide' ]);
+gulp.task('assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:favicon', 'pl-copy:font', 'pl-copy:data', 'pl-copy:css', 'pl-copy:styleguide' ]);
 gulp.task('prelab', ['pl-clean', 'assets']);
 gulp.task('lab', ['prelab', 'patternlab'], function(cb){cb();});
 gulp.task('patterns', ['patternlab:only_patterns']);
