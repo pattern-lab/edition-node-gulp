@@ -93,7 +93,11 @@ gulp.task('pl-copy:css', function(){
 // Styleguide Copy
 gulp.task('pl-copy:styleguide', function(){
   return gulp.src(path.resolve(paths().source.styleguide, '**/*'))
-    .pipe(gulp.dest(path.resolve(paths().public.root)))
+    .pipe(gulp.dest(function(file){
+      //flatten anything inside the styleguide into a single output dir per http://stackoverflow.com/a/34317320/1790362
+      file.path = path.join(file.base, path.basename(file.path));
+      return path.resolve(paths().public.root);
+    }))
     .pipe(browserSync.stream());
 });
 
