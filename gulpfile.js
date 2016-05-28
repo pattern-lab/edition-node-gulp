@@ -90,13 +90,20 @@ gulp.task('pl-copy:css', function(){
     .pipe(browserSync.stream());
 });
 
-// Styleguide Copy
+// Styleguide Copy everything but css
 gulp.task('pl-copy:styleguide', function(){
-  return gulp.src(path.resolve(paths().source.styleguide, '**/*'))
+  return gulp.src(path.resolve(paths().source.styleguide, '**/!(*.css)'))
+    .pipe(gulp.dest(path.resolve(paths().public.root)))
+    .pipe(browserSync.stream());
+});
+
+// Styleguide Copy and flatten css
+gulp.task('pl-copy:styleguide-css', function(){
+  return gulp.src(path.resolve(paths().source.styleguide, '**/*.css'))
     .pipe(gulp.dest(function(file){
       //flatten anything inside the styleguide into a single output dir per http://stackoverflow.com/a/34317320/1790362
       file.path = path.join(file.base, path.basename(file.path));
-      return path.resolve(paths().public.root);
+      return path.resolve(path.join(paths().public.styleguide, 'css'));
     }))
     .pipe(browserSync.stream());
 });
@@ -146,7 +153,7 @@ gulp.task('pl-connect', ['lab'], function() {
   });
   gulp.watch(path.resolve(paths().source.css, '**/*.css'), ['pl-copy:css']);
 
-  gulp.watch(path.resolve(paths().source.styleguide, '**/*.*'), ['pl-copy:styleguide']);
+  gulp.watch(path.resolve(paths().source.styleguide, '**/*.*'), ['pl-copy:styleguide', 'pl-copy:styleguide-css']);
 
   var patternWatches = [
     path.resolve(paths().source.patterns, '**/*.json'),
@@ -166,7 +173,7 @@ gulp.task('lab-pipe', ['lab'], function(cb){
 
 gulp.task('default', ['lab']);
 
-gulp.task('assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:favicon', 'pl-copy:font', 'pl-copy:data', 'pl-copy:css', 'pl-copy:styleguide' ]);
+gulp.task('assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:favicon', 'pl-copy:font', 'pl-copy:data', 'pl-copy:css', 'pl-copy:styleguide', 'pl-copy:styleguide-css' ]);
 gulp.task('prelab', ['pl-clean', 'assets']);
 gulp.task('lab', ['prelab', 'patternlab'], function(cb){cb();});
 gulp.task('patterns', ['patternlab:only_patterns']);
