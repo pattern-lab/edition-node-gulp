@@ -31,6 +31,11 @@ gulp.task('patternlab:version', function (done) {
   done();
 });
 
+gulp.task('patternlab:starterkit-list', function (done) {
+  pl.list_starterkits();
+  done();
+});
+
 //clean patterns dir
 gulp.task('pl-clean', function(cb){
   del.sync([path.resolve(paths().public.patterns, '*')], {force: true});
