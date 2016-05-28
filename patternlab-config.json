@@ -61,5 +61,6 @@
   "patternExportPatternPartials": [],
   "patternExportDirectory": "./pattern_exports/",
   "baseurl" : "",
-  "cacheBust": true
+  "cacheBust": true,
+  "starterkitSubDir": "dist"
 }
