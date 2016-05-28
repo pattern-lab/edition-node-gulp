@@ -6,7 +6,8 @@ var pkg = require('./package.json'),
     gulp = require('gulp'),
     path = require('path'),
     del = require('del'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    argv = require('minimist')(process.argv.slice(2));;
 
 require('gulp-load')(gulp);
 
@@ -33,6 +34,11 @@ gulp.task('patternlab:version', function (done) {
 
 gulp.task('patternlab:starterkit-list', function (done) {
   pl.list_starterkits();
+  done();
+});
+
+gulp.task('patternlab:starterkit-load', function (done) {
+  pl.load_starterkit(argv.kit);
   done();
 });
 
@@ -79,7 +85,7 @@ gulp.task('pl-copy:data', function(){
 
 // CSS Copy
 gulp.task('pl-copy:css', function(){
-  return gulp.src(path.resolve(paths().source.css, 'style.css'))
+  return gulp.src(path.resolve(paths().source.css, '*.css'))
     .pipe(gulp.dest(path.resolve(paths().public.css)))
     .pipe(browserSync.stream());
 });

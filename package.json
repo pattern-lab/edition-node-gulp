@@ -8,6 +8,7 @@
     "gulp": "^3.9.1",
     "gulp-load": "^0.1.1",
     "handlebars": "^4.0.5",
+    "minimist": "^1.2.0",
     "mustache": "^2.2.1",
     "patternlab-node": "pattern-lab/patternlab-node#dev-2.0-core",
     "styleguidekit-assets-default": "pattern-lab/styleguidekit-assets-default#feature-panels",
