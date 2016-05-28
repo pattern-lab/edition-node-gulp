@@ -156,6 +156,4 @@ gulp.task('prelab', ['pl-clean', 'assets']);
 gulp.task('lab', ['prelab', 'patternlab'], function(cb){cb();});
 gulp.task('patterns', ['patternlab:only_patterns']);
 gulp.task('pl-serve', ['lab', 'pl-connect']);
-
-gulp.task('version', ['patternlab:version']);
 gulp.task('help', ['patternlab:help']);
