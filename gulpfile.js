@@ -26,6 +26,11 @@ gulp.task('patternlab', ['prelab'], function (done) {
   done();
 });
 
+gulp.task('patternlab:version', function (done) {
+  pl.version();
+  done();
+});
+
 //clean patterns dir
 gulp.task('pl-clean', function(cb){
   del.sync([path.resolve(paths().public.patterns, '*')], {force: true});
