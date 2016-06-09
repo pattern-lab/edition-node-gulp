@@ -157,6 +157,7 @@ gulp.task('pl-connect', ['lab'], function() {
 
   var patternWatches = [
     path.resolve(paths().source.patterns, '**/*.json'),
+    path.resolve(paths().source.patterns, '**/*.md'),
     path.resolve(paths().source.data, '*.json'),
     path.resolve(paths().source.fonts + '/*'),
     path.resolve(paths().source.images + '/*'),
