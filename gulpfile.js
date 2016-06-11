@@ -161,6 +161,7 @@ gulp.task('pl-connect', ['lab'], function() {
     path.resolve(paths().source.data, '*.json'),
     path.resolve(paths().source.fonts + '/*'),
     path.resolve(paths().source.images + '/*'),
+    path.resolve(paths().source.meta, '*'),
     path.resolve(paths().source.annotations + '/*')
   ].concat(getTemplateWatches());
 
