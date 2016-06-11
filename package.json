@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "dependencies": {
     "browser-sync": "^2.11.2",
-    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-load": "^0.1.1",
     "minimist": "^1.2.0",

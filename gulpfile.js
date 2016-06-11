@@ -5,7 +5,6 @@
 var pkg = require('./package.json'),
     gulp = require('gulp'),
     path = require('path'),
-    del = require('del'),
     browserSync = require('browser-sync').create(),
     argv = require('minimist')(process.argv.slice(2));;
 
@@ -22,8 +21,12 @@ function paths() {
   return config.paths;
 }
 
+function getConfiguredCleanOption() {
+  return config.cleanPublic;
+}
+
 gulp.task('patternlab', ['prelab'], function (done) {
-  pl.build(argv.clean);
+  pl.build(getConfiguredCleanOption());
   done();
 });
 
@@ -33,13 +36,14 @@ gulp.task('patternlab:version', function (done) {
 });
 
 gulp.task('patternlab:help', function (done) {
+  console.log(getConfiguredCleanOption());
   pl.help();
   done();
 });
 
 
 gulp.task('patternlab:patternsonly', function (done) {
-  pl.patternsonly(argv.clean);
+  pl.patternsonly(getConfiguredCleanOption());
   done();
 });
 
@@ -51,12 +55,6 @@ gulp.task('patternlab:starterkit-list', function (done) {
 gulp.task('patternlab:starterkit-load', function (done) {
   pl.loadstarterkit(argv.kit);
   done();
-});
-
-//clean patterns dir
-gulp.task('pl-clean', function(cb){
-  del.sync([path.resolve(paths().public.patterns, '*')], {force: true});
-  cb();
 });
 
 /******************************************************
@@ -187,7 +185,7 @@ gulp.task('lab-pipe', ['lab'], function(cb){
 gulp.task('default', ['lab']);
 
 gulp.task('assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:favicon', 'pl-copy:font', 'pl-copy:data', 'pl-copy:css', 'pl-copy:styleguide', 'pl-copy:styleguide-css' ]);
-gulp.task('prelab', ['pl-clean', 'assets']);
+gulp.task('prelab', ['assets']);
 gulp.task('lab', ['prelab', 'patternlab'], function(cb){cb();});
 gulp.task('patterns', ['patternlab:only_patterns']);
 gulp.task('pl-serve', ['lab', 'pl-connect']);
