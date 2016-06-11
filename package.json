@@ -1,11 +1,10 @@
 {
   "name": "edition-node-gulp",
   "description": "The gulp wrapper around patternlab-node core.",
-  "version": "0.1.0",
+  "version": "1.0.0-alpha",
   "dependencies": {
     "browser-sync": "^2.11.2",
     "gulp": "^3.9.1",
-    "gulp-load": "^0.1.1",
     "minimist": "^1.2.0",
     "patternlab-node": "pattern-lab/patternlab-node#dev-2.0-core",
     "styleguidekit-assets-default": "pattern-lab/styleguidekit-assets-default#feature-panels",

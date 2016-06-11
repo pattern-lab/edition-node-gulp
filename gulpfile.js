@@ -8,8 +8,6 @@ var pkg = require('./package.json'),
     browserSync = require('browser-sync').create(),
     argv = require('minimist')(process.argv.slice(2));;
 
-require('gulp-load')(gulp);
-
 /******************************************************
  * PATTERN LAB CONFIGURATION
 ******************************************************/
