@@ -20,10 +20,10 @@ Please follow the directions for [installing Node](https://nodejs.org/en/downloa
 
 There are two methods for downloading and installing the Gulp Edition:
 
-* [Download a pre-built project](#download-a-pre-built-package)
+* [Download a pre-built package](#download-a-pre-built-package)
 * [Use Composer to create a project](#use-npm)
 
-### Download a pre-built project
+### Download a pre-built package
 
 The fastest way to get started with the Gulp Edition is to [download the pre-built version](https://github.com/pattern-lab/edition-node-gulp/releases) from the [releases page](https://github.com/pattern-lab/edition-node-gulp/releases). The pre-built project comes with the [Default Starterkit for Mustache](https://github.com/pattern-lab/starterkit-mustache-default/tree/dev) installed by default.
 
