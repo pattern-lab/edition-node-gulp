@@ -1,6 +1,7 @@
 /******************************************************
- * DESCRIPTION
- * Special thanks to oscar-g (https://github.com/oscar-g) for starting this at https://github.com/oscar-g/patternlab-node/tree/dev-gulp
+ * PATTERN LAB NODE
+ * EDITION-NODE-GULP
+ * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
 ******************************************************/
 var pkg = require('./package.json'),
     gulp = require('gulp'),
@@ -180,6 +181,9 @@ gulp.task('pl-pipe', ['pl-build'], function(cb){
   browserSync.reload();
 });
 
+/******************************************************
+ * COMPOUND AND ALIASED TASKS
+******************************************************/
 gulp.task('default', ['pl-build']);
 
 gulp.task('pl-assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:favicon', 'pl-copy:font', 'pl-copy:data', 'pl-copy:css', 'pl-copy:styleguide', 'pl-copy:styleguide-css' ]);
