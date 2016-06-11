@@ -23,7 +23,7 @@ function paths() {
 }
 
 gulp.task('patternlab', ['prelab'], function (done) {
-  pl.build(true);
+  pl.build(argv.clean);
   done();
 });
 
@@ -32,13 +32,24 @@ gulp.task('patternlab:version', function (done) {
   done();
 });
 
+gulp.task('patternlab:help', function (done) {
+  pl.help();
+  done();
+});
+
+
+gulp.task('patternlab:patternsonly', function (done) {
+  pl.patternsonly(argv.clean);
+  done();
+});
+
 gulp.task('patternlab:starterkit-list', function (done) {
-  pl.list_starterkits();
+  pl.liststarterkits();
   done();
 });
 
 gulp.task('patternlab:starterkit-load', function (done) {
-  pl.load_starterkit(argv.kit);
+  pl.loadstarterkit(argv.kit);
   done();
 });
 
