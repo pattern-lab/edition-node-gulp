@@ -189,7 +189,7 @@ gulp.task('default', ['pl-build']);
 gulp.task('pl-assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:favicon', 'pl-copy:font', 'pl-copy:data', 'pl-copy:css', 'pl-copy:styleguide', 'pl-copy:styleguide-css' ]);
 gulp.task('pl-prelab', ['pl-assets']);
 gulp.task('pl-build', ['pl-prelab', 'patternlab'], function(cb){cb();});
-gulp.task('pl-serve', ['lab', 'pl-connect']);
+gulp.task('pl-serve', ['pl-build', 'pl-connect']);
 
 //Aliases
 gulp.task('pl-help', ['patternlab:help']);
