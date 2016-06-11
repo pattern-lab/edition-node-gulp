@@ -23,7 +23,7 @@ function getConfiguredCleanOption() {
   return config.cleanPublic;
 }
 
-gulp.task('patternlab', ['prelab'], function (done) {
+gulp.task('patternlab', ['pl-prelab'], function (done) {
   pl.build(getConfiguredCleanOption());
   done();
 });
@@ -130,7 +130,7 @@ function getTemplateWatches() {
   });
 }
 
-gulp.task('pl-connect', ['lab'], function() {
+gulp.task('pl-connect', ['pl-build'], function() {
   browserSync.init({
     server: {
       baseDir: path.resolve(paths().public.root)
@@ -172,19 +172,21 @@ gulp.task('pl-connect', ['lab'], function() {
     path.resolve(paths().source.annotations + '/*')
   ].concat(getTemplateWatches());
 
-  gulp.watch(patternWatches, ['lab-pipe'], function () { browserSync.reload(); });
+  gulp.watch(patternWatches, ['pl-pipe'], function () { browserSync.reload(); });
 });
 
-gulp.task('lab-pipe', ['lab'], function(cb){
+gulp.task('pl-pipe', ['pl-build'], function(cb){
   cb();
   browserSync.reload();
 });
 
-gulp.task('default', ['lab']);
+gulp.task('default', ['pl-build']);
 
-gulp.task('assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:favicon', 'pl-copy:font', 'pl-copy:data', 'pl-copy:css', 'pl-copy:styleguide', 'pl-copy:styleguide-css' ]);
-gulp.task('prelab', ['assets']);
-gulp.task('lab', ['prelab', 'patternlab'], function(cb){cb();});
-gulp.task('patterns', ['patternlab:only_patterns']);
+gulp.task('pl-assets', ['pl-copy:js', 'pl-copy:img', 'pl-copy:favicon', 'pl-copy:font', 'pl-copy:data', 'pl-copy:css', 'pl-copy:styleguide', 'pl-copy:styleguide-css' ]);
+gulp.task('pl-prelab', ['pl-assets']);
+gulp.task('pl-build', ['pl-prelab', 'patternlab'], function(cb){cb();});
 gulp.task('pl-serve', ['lab', 'pl-connect']);
-gulp.task('help', ['patternlab:help']);
+
+//Aliases
+gulp.task('pl-help', ['patternlab:help']);
+gulp.task('pl-patterns', ['patternlab:patternsonly']);
