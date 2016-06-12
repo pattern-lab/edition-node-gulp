@@ -3,8 +3,7 @@
  * EDITION-NODE-GULP
  * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
 ******************************************************/
-var pkg = require('./package.json'),
-    gulp = require('gulp'),
+var gulp = require('gulp'),
     path = require('path'),
     browserSync = require('browser-sync').create(),
     argv = require('minimist')(process.argv.slice(2));;
@@ -35,7 +34,6 @@ gulp.task('patternlab:version', function (done) {
 });
 
 gulp.task('patternlab:help', function (done) {
-  console.log(getConfiguredCleanOption());
   pl.help();
   done();
 });
