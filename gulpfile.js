@@ -116,7 +116,7 @@ gulp.task('patternlab:liststarterkits', function (done) {
 });
 
 gulp.task('patternlab:loadstarterkit', function (done) {
-  patternlab.loadstarterkit(argv.kit);
+  patternlab.loadstarterkit(argv.kit, argv.clean);
   done();
 });
 
