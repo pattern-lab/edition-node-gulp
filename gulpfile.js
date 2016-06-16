@@ -19,9 +19,7 @@ gulp.task('pl-copy:js', function(){
 
 // Images copy
 gulp.task('pl-copy:img', function(){
-  return gulp.src(
-    [ '**/*.gif', '**/*.png', '**/*.jpg', '**/*.jpeg'  ],
-    {cwd: path.resolve(paths().source.images)} )
+  return gulp.src('*',{cwd: path.resolve(paths().source.images)} )
     .pipe(gulp.dest(path.resolve(paths().public.images)));
 });
 
