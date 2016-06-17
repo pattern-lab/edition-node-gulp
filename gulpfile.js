@@ -157,7 +157,7 @@ function watch() {
   gulp.watch(patternWatches).on('change', gulp.series(build, reload));
 }
 
-gulp.task('pl-connect', gulp.series('pl-build', function(done) {
+gulp.task('pl-connect', gulp.series(function(done) {
   browserSync.init({
     server: {
       baseDir: path.resolve(paths().public.root)
@@ -184,6 +184,8 @@ gulp.task('pl-connect', gulp.series('pl-build', function(done) {
         'text-align: center'
       ]
     }
+  }, function(){
+    console.log('PATTERN LAB NODE WATCHING FOR CHANGES');
   });
   done();
 }));
