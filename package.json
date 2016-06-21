@@ -7,8 +7,8 @@
     "gulp": "gulpjs/gulp#4.0",
     "minimist": "^1.2.0",
     "patternlab-node": "^2.0.0",
-    "styleguidekit-assets-default": "pattern-lab/styleguidekit-assets-default#v3.0.0",
-    "styleguidekit-mustache-default": "pattern-lab/styleguidekit-mustache-default#v3.0.0"
+    "styleguidekit-assets-default": "^3.0.0",
+    "styleguidekit-mustache-default": "^3.0.0"
   },
   "keywords": [
     "Pattern Lab",
