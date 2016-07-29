@@ -61,7 +61,7 @@
   "cacheBust": true,
   "starterkitSubDir": "dist",
   "outputFileSuffixes": {
-    "rendered": "",
+    "rendered": ".rendered",
     "rawTemplate": "",
     "markupOnly": ".markup-only"
   }
