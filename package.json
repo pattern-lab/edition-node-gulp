@@ -25,7 +25,13 @@
   "author": "Brian Muenzenmeyer",
   "scripts": {
     "postinstall": "node scripts/postinstall.js",
-    "gulp": "gulp -- "
+    "gulp": "gulp -- ",
+    "patternlab:build": "gulp patternlab:build",
+    "patternlab:patternsonly": "gulp patternlab:patternsonly",
+    "patternlab:version" : "gulp patternlab:version",
+    "patternlab:help" : "gulp patternlab:help",
+    "patternlab:liststarterkits": "gulp patternlab:liststarterkits",
+    "patternlab:loadstarterkit" : "gulp patternlab:loadstarterkit"
   },
   "license": "MIT",
   "engines": {
