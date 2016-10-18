@@ -1,0 +1,39 @@
+//
+// Basic Bootstrap table
+//
+
+.table {
+
+  th,
+  td {
+    // Changes default padding to pf specs
+    padding: (.5 * $table-cell-padding) $table-cell-padding;
+  }
+
+  thead th {
+    border-bottom-width: $table-border-width;
+    @include gradient-y(
+      $start-color: $color-pf-black-100,
+      $end-color: $color-pf-black-200,
+      $start-percent: 0%,
+      $end-percent: 100%);
+  }
+
+  tbody + tbody {
+      border-bottom-width: $table-border-width;
+  }
+
+}
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+  thead {
+    th,
+    td {
+      border-bottom-width: $table-border-width;
+    }
+  }
+}

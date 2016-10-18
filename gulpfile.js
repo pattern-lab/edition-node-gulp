@@ -6,6 +6,7 @@
 var gulp = require('gulp'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
+  sass = require('gulp-sass'),
   argv = require('minimist')(process.argv.slice(2));
 
 /******************************************************
@@ -33,6 +34,13 @@ gulp.task('pl-copy:favicon', function(){
 gulp.task('pl-copy:font', function(){
   return gulp.src('*', {cwd: path.resolve(paths().source.fonts)})
     .pipe(gulp.dest(path.resolve(paths().public.fonts)));
+});
+
+// SASS Compilation
+gulp.task('pl-sass', function(){
+  return gulp.src(path.resolve(paths().source.scss, '**/*.scss'))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(path.resolve(paths().source.css)));
 });
 
 // CSS Copy

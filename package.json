@@ -30,5 +30,8 @@
   "license": "MIT",
   "engines": {
     "node": ">=5.0"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.4"
   }
 }
