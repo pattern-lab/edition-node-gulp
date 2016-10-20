@@ -2,9 +2,8 @@
  * Patternfly Core
  */
 
-// Import Overpass Font
-// http://overpassfont.org/
-@import url("http://overpass-30e2.kxcdn.com/overpass.css");
+// Import Overpass & Icon Fonts
+@import "pf-basic-fonts";
 
 // Core variables and mixins
 @import "pf-basic-colors";
