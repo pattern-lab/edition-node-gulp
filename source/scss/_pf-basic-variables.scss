@@ -88,7 +88,7 @@ $enable-shadows:            true;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer:   1rem;
+$spacer:   1rem; // 14px
 $pf-spacer-2xs:    ($spacer * .25);
 $pf-spacer-xs:     ($spacer * .5);
 $pf-spacer-sm:     ($spacer * .75);
@@ -133,8 +133,8 @@ $spacers: (
     y: $pf-spacer-md
   ),
   pf-lg: (
-    x: $pf-spacer-xxs,
-    y: $pf-spacer-xxs
+    x: $pf-spacer-lg,
+    y: $pf-spacer-lg
   ),
   pf-xl: (
     x: $pf-spacer-xl,
@@ -148,14 +148,15 @@ $spacers: (
     x: $pf-spacer-3xl,
     y: $pf-spacer-3xl
   )
-)
+);
 $border-width: 1px;
 
 
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
- $font-family-sans-serif: Overpass, overpass, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: "Overpass", Overpass,  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px;

@@ -20,7 +20,7 @@ Write accessibility, aria tags, tab index and other notes to make this component
 
 ## Usage
 
-| Class Name | Usage |
+| Class | Usage |
 | -- | -- |
-| `.btn` | **Applied to:** `<a>`, `<button>` **Outcome:** Initiates a button **Required:** Yes **Remarks:** Always use it with a modifier class. |
-| `.btn-secondary` | **Applied to:** `.btn` **Outcome:** Adds secondary color **Required:** Yes |
+| `.btn` **Applied to:** `<a>`, `<button>` |  **Outcome:** Initiates a button **Required:** Yes **Remarks:** Always use it with a modifier class. |
+| `.btn-secondary` **Applied to:** `.btn` | **Outcome:** Adds secondary color **Required:** Yes |
