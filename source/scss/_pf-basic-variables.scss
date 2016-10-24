@@ -88,15 +88,14 @@ $enable-shadows:            true;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer:   1rem; // 14px
-$pf-spacer-2xs:    ($spacer * .25);
-$pf-spacer-xs:     ($spacer * .5);
-$pf-spacer-sm:     ($spacer * .75);
-$pf-spacer-md:     $spacer;
-$pf-spacer-lg:     ($spacer * 1.25);
-$pf-spacer-xl:     ($spacer * 1.5);
-$pf-spacer-2xl:    ($spacer * 1.75);
-$pf-spacer-3xl:    ($spacer * 2);
+$spacer:   1rem;
+$pf-spacer-xs:     ($spacer * .5); // 7px
+$pf-spacer-sm:     $spacer; // 14px
+$pf-spacer-md:     ($spacer * 1.5); // 21px
+$pf-spacer-lg:     ($spacer * 2); // 28px
+$pf-spacer-xl:     ($spacer * 2.5); // 35px
+$pf-spacer-2xl:    ($spacer * 3); // 42 px
+
 $spacer-x: $spacer;
 $spacer-y: $spacer;
 $spacers: (
@@ -115,10 +114,6 @@ $spacers: (
   3: (
     x: ($spacer-x * 3),
     y: ($spacer-y * 3)
-  ),
-  pf-2xs: (
-    x: $pf-spacer-2xs,
-    y: $pf-spacer-2xs
   ),
   pf-xs: (
     x: $pf-spacer-xs,
@@ -143,10 +138,6 @@ $spacers: (
   pf-2xl: (
     x: $pf-spacer-2xl,
     y: $pf-spacer-2xl
-  ),
-  pf-3xl: (
-    x: $pf-spacer-3xl,
-    y: $pf-spacer-3xl
   )
 );
 $border-width: 1px;
