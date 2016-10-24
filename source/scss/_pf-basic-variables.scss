@@ -61,7 +61,6 @@ $brand-danger:              $color-pf-red-100;
 // $brand-inverse:             $gray-dark;
 
 
-
 // Font weight
 //
 
@@ -73,7 +72,7 @@ $pf-font-weight-light:  200;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-flex:               true;
-$enable-rounded:            true;
+$enable-rounded:            false;
 $enable-shadows:            true;
 // $enable-gradients:          true;
 // $enable-transitions:        false !default;
@@ -89,27 +88,67 @@ $enable-shadows:            true;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-// $spacer:   1rem !default;
-// $spacer-x: $spacer !default;
-// $spacer-y: $spacer !default;
-// $spacers: (
-//   0: (
-//     x: 0,
-//     y: 0
-//   ),
-//   1: (
-//     x: $spacer-x,
-//     y: $spacer-y
-//   ),
-//   2: (
-//     x: ($spacer-x * 1.5),
-//     y: ($spacer-y * 1.5)
-//   ),
-//   3: (
-//     x: ($spacer-x * 3),
-//     y: ($spacer-y * 3)
-//   )
-// ) !default;
+$spacer:   1rem;
+$pf-spacer-2xs:    ($spacer * .25);
+$pf-spacer-xs:     ($spacer * .5);
+$pf-spacer-sm:     ($spacer * .75);
+$pf-spacer-md:     $spacer;
+$pf-spacer-lg:     ($spacer * 1.25);
+$pf-spacer-xl:     ($spacer * 1.5);
+$pf-spacer-2xl:    ($spacer * 1.75);
+$pf-spacer-3xl:    ($spacer * 2);
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  2: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  3: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  ),
+  pf-2xs: (
+    x: $pf-spacer-2xs,
+    y: $pf-spacer-2xs
+  ),
+  pf-xs: (
+    x: $pf-spacer-xs,
+    y: $pf-spacer-xs
+  ),
+  pf-sm: (
+    x: $pf-spacer-sm,
+    y: $pf-spacer-sm
+  ),
+  pf-md: (
+    x: $pf-spacer-md,
+    y: $pf-spacer-md
+  ),
+  pf-lg: (
+    x: $pf-spacer-xxs,
+    y: $pf-spacer-xxs
+  ),
+  pf-xl: (
+    x: $pf-spacer-xl,
+    y: $pf-spacer-xl
+  ),
+  pf-2xl: (
+    x: $pf-spacer-2xl,
+    y: $pf-spacer-2xl
+  ),
+  pf-3xl: (
+    x: $pf-spacer-3xl,
+    y: $pf-spacer-3xl
+  )
+)
 $border-width: 1px;
 
 
@@ -134,9 +173,9 @@ $headings-font-weight: $pf-font-weight-bold;
 
 // Overwrites default border radius
 //
-$border-radius: 1px;
-$border-radius-lg: $border-radius;
-$border-radius-sm: $border-radius;
+// $border-radius: 1px;
+// $border-radius-lg: $border-radius;
+// $border-radius-sm: $border-radius;
 
 // Tables
 //
@@ -205,9 +244,9 @@ $btn-link-disabled-color:        $gray-light !default;
 // $btn-toolbar-margin:             .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:              $border-radius;
-$btn-border-radius-lg:           $border-radius-lg;
-$btn-border-radius-sm:           $border-radius-sm;
+// $btn-border-radius:              $border-radius;
+// $btn-border-radius-lg:           $border-radius-lg;
+// $btn-border-radius-sm:           $border-radius-sm;
 
 // Dropdowns
 //
