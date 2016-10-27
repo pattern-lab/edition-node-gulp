@@ -129,6 +129,10 @@ $brand-warning:             $color-pf-orange-400;
 $brand-danger:              $color-pf-red-100;
 // $brand-inverse:             $gray-dark;
 
+// Hover colors
+// Colors for hovered elements
+$pf-bg-hover-color: $color-pf-blue-50;
+$pf-border-hover-color: $color-pf-blue-200;
 
 // Font weight
 //
@@ -274,8 +278,8 @@ $headings-font-weight: $pf-font-weight-bold;
 
 // $table-bg:                      transparent !default;
 $table-bg-accent:               $color-pf-black-150;
-$table-bg-hover:                $color-pf-blue-50;
-$pf-table-border-hover:         $color-pf-blue-200;
+$table-bg-hover:                $pf-bg-hover-color;
+$pf-table-border-hover:         $pf-border-hover-color;
 $table-bg-active:               $table-bg-hover;
 
 // $table-border-width:            $border-width !default;
@@ -338,6 +342,29 @@ $btn-link-disabled-color:        $gray-light !default;
 // Dropdowns
 //
 // Dropdown menu container and contents.
+
+$dropdown-min-width:             $pf-spacer-xxxxl;
+$dropdown-padding-y:             $pf-spacer-xxs;
+$dropdown-margin-top:            0rem;
+$dropdown-bg:                    $color-pf-white;
+$dropdown-border-color:          $color-pf-black-300;
+$dropdown-border-width:          $border-width;
+$dropdown-divider-bg:            $color-pf-black-200;
+$dropdown-box-shadow:            $pf-box-shadow;
+
+$dropdown-link-color:            $gray-dark;
+$dropdown-link-hover-color:      $gray-dark;
+$dropdown-link-hover-bg:         $pf-bg-hover-color;
+
+$dropdown-link-active-color:     $color-pf-white;
+$dropdown-link-active-bg:        $brand-primary;
+
+$dropdown-link-disabled-color:   $gray-light;
+
+$dropdown-item-padding-x:        $pf-spacer-lg;
+
+$dropdown-header-color:          $gray-light;
+
 
 // TODO: Check updates in alpha 5 when its avaliable, since the units
 // changed from px to rems
