@@ -6,6 +6,7 @@
     "browser-sync": "^2.0.0",
     "gulp": "gulpjs/gulp#4.0",
     "minimist": "^1.2.0",
+    "patternengine-node-handlebars": "^1.0.0",
     "patternlab-node": "^2.0.0",
     "styleguidekit-assets-default": "^3.0.0",
     "styleguidekit-mustache-default": "^3.0.0"
@@ -30,5 +31,9 @@
   "license": "MIT",
   "engines": {
     "node": ">=5.0"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
+    "gulp-sass": "^2.3.2"
   }
 }

@@ -1,0 +1,22 @@
+// scss-lint:disable QualifyingElement
+
+.btn-primary {
+  @include pf-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-start-bg, $btn-primary-end-bg, $btn-primary-border);
+}
+
+.btn-secondary {
+  @include pf-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-start-bg, $btn-secondary-end-bg, $btn-secondary-border);
+}
+
+.btn-info {
+  @include pf-button-variant($btn-info-color, $btn-info-bg, $btn-info-start-bg, $btn-info-end-bg,  $btn-info-border);
+}
+.btn-success {
+  @include pf-button-variant($btn-success-color, $btn-success-bg, $btn-success-start-bg, $btn-success-end-bg,  $btn-success-border);
+}
+.btn-warning {
+  @include pf-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-start-bg, $btn-warning-end-bg,  $btn-warning-border);
+}
+.btn-danger {
+  @include pf-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-start-bg, $btn-danger-end-bg,  $btn-danger-border);
+}

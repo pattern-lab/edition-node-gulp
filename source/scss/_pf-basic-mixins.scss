@@ -1,0 +1,67 @@
+// PatternFly Button variants
+//
+// PatternFly btn adds variables for gradients.
+
+@mixin pf-button-variant($color, $background, $background-start, $background-end, $border) {
+  $active-background: darken($background, 5%);
+  $active-border: darken($border, 7%);
+
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
+
+  @include gradient-y(
+    $start-color: $background-start,
+      $end-color: $background-end,
+    $start-percent: $pf-gradient-percent-start,
+      $end-percent: $pf-gradient-percent-end);
+
+  @include hover {
+    background-image: none;
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+    // Remove the gradient for the pressed/active state
+    background-image: none;
+    @include box-shadow($btn-active-box-shadow);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    background-image: none;
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+    @include hover {
+      background-color: $background;
+          border-color: $border;
+          background-image: none;
+    }
+  }
+}

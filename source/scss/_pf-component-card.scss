@@ -1,0 +1,26 @@
+//
+// Base styles
+//
+
+.card {
+  @include box-shadow($pf-box-shadow);
+}
+
+// Although .pf-card is a modifier of bootstrap .card, I am treating it as a
+// block element. The nesting classes are to keep the code DRY and overwrite
+// bootstrap defaults.
+//
+
+.card{
+  border: none;
+
+  .card-header{
+    background: $pf-card-cap-bg;
+    border-bottom-color: $pf-card-border-color;
+  }
+
+  .card-footer{
+    background: $pf-card-footer-bg;
+    border-top-color: $pf-card-border-color
+  }
+}
