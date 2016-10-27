@@ -41,7 +41,76 @@ $pf-gradient-percent-end: 100%;
 
 // Patternfly font path
 // Defines path to /font foldeer
-$pf-font-path: "../fonts/";
+$fa-font-path: "../node_modules/font-awesome/fonts";
+$pf-font-path: "../fonts";
+// $pf-icon-font-name-fa:  "FontAwesome" !default;
+$pf-icon-font-name:  "PatternFlyIcons-webfont";
+$pf-icon-prefix:  pficon;
+
+$pficon-var-add-circle-o:                                           "\e61b";
+$pficon-var-middleware:                                             "\e917";
+$pficon-var-blueprint:                                              "\e915";
+$pficon-var-build:                                                  "\e902";
+$pficon-var-builder-image:                                          "\e800";
+$pficon-var-bundle:                                                 "\e918";
+$pficon-var-close:                                                  "\e60b";
+$pficon-var-cloud-security:                                         "\e903";
+$pficon-var-cloud-tenant:                                           "\e904";
+$pficon-var-cluster:                                                "\e620";
+$pficon-var-container-node:                                         "\e621";
+$pficon-var-cpu:                                                    "\e905";
+$pficon-var-delete:                                                 "\e611";
+$pficon-var-domain:                                                 "\e919";
+$pficon-var-edit:                                                   "\e60a";
+$pficon-var-enterprise:                                             "\e906";
+$pficon-var-error-circle-o:                                         "\e61d";
+$pficon-var-export:                                                 "\e616";
+$pficon-var-flag:                                                   "\e603";
+$pficon-var-flavor:                                                 "\e907";
+$pficon-var-folder-close:                                           "\e607";
+$pficon-var-folder-open:                                            "\e606";
+$pficon-var-help:                                                   "\e605";
+$pficon-var-history:                                                "\e617";
+$pficon-var-home:                                                   "\e618";
+$pficon-var-image:                                                  "\e61f";
+$pficon-var-import:                                                 "\e615";
+$pficon-var-info:                                                   "\e604";
+$pficon-var-kubernetes:                                             "\e627";
+$pficon-var-memory:                                                 "\e908";
+$pficon-var-network:                                                "\e909";
+$pficon-var-ok:                                                     "\e602";
+$pficon-var-openshift:                                              "\e626";
+$pficon-var-private:                                                "\e914";
+$pficon-var-print:                                                  "\e612";
+$pficon-var-project:                                                "\e622";
+$pficon-var-regions:                                                "\e90a";
+$pficon-var-registry:                                               "\e623";
+$pficon-var-replicator:                                             "\e624";
+$pficon-var-repository:                                             "\e90b";
+$pficon-var-resource-pool:                                          "\e90c";
+$pficon-var-resources-almost-full:                                  "\e912";
+$pficon-var-resources-full:                                         "\e913";
+$pficon-var-restart:                                                "\e613";
+$pficon-var-route:                                                  "\e625";
+$pficon-var-running:                                                "\e614";
+$pficon-var-save:                                                   "\e601";
+$pficon-var-screen:                                                 "\e600";
+$pficon-var-server:                                                 "\e90d";
+$pficon-var-server-group:                                           "\e91a";
+$pficon-var-service:                                                "\e61e";
+$pficon-var-settings:                                               "\e610";
+$pficon-var-storage-domain:                                         "\e90e";
+$pficon-var-tenant:                                                 "\e916";
+$pficon-var-thumb-tack-o:                                           "\e609";
+$pficon-var-topology:                                               "\e608";
+$pficon-var-trend-down:                                             "\e900";
+$pficon-var-trend-up:                                               "\e901";
+$pficon-var-user:                                                   "\e60e";
+$pficon-var-users:                                                  "\e60f";
+$pficon-var-virtual-machine:                                        "\e90f";
+$pficon-var-volume:                                                 "\e910";
+$pficon-var-warning-triangle-o:                                     "\e61c";
+$pficon-var-zone:                                                   "\e911";
 
 // Colors
 //
@@ -166,7 +235,7 @@ $border-width: 1px;
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif: "Overpass", Overpass,  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: “Overpass”, Overpass, “Open Sans”, Helvetica, sans-serif;
 
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
