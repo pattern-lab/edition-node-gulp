@@ -12,6 +12,7 @@
   "dropdownText" : "Dropdown",
   "dropdownAriaLabelledby": "Dropdown",
   "dropdownList": ["Action", "Another action", "Something else here"],
+  "breadcrumbList": ["Back to Top Level", "Second Level", "Third Level"],
   "img": {
     "avatar": {
       "src": "http://placeimg.com/100/100/people",
