@@ -31,6 +31,11 @@ gulp.task('pl-copy:favicon', function(){
 });
 
 // Fonts copy
+gulp.task('pf-copy:font', function(){
+  return gulp.src('*', {cwd: path.resolve('node_modules/font-awesome/fonts')})
+    .pipe(gulp.dest(path.resolve(paths().public.fonts)));
+});
+
 gulp.task('pl-copy:font', function(){
   return gulp.src('*', {cwd: path.resolve(paths().source.fonts)})
     .pipe(gulp.dest(path.resolve(paths().public.fonts)));
@@ -92,6 +97,7 @@ gulp.task('pl-assets', gulp.series(
     'pl-copy:js',
     'pl-copy:img',
     'pl-copy:favicon',
+    'pf-copy:font',
     'pl-copy:font',
     'pl-copy:css',
     'pl-copy:styleguide',
