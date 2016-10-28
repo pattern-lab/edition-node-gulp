@@ -1,9 +1,7 @@
 ---
 title: PatternFly Icons
 ---
----
-title: FontAwesome icons
----
+
 ## Overview
 
 PatternFly includes custom icons and selections from [IcoMoon](https://icomoon.io/#icons).
