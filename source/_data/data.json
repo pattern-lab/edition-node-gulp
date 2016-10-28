@@ -7,6 +7,8 @@
   "btnText" : "Button",
   "btnClass" : "btn-secondary",
   "btnAriaLabelledby": "Button",
+  "tagText" : "default",
+  "tagClass" : "tag-default",
   "img": {
     "avatar": {
       "src": "http://placeimg.com/100/100/people",
