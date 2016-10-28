@@ -1,5 +1,5 @@
 ---
-title: Buttons
+title: Icons
 ---
 ## Overview
 
