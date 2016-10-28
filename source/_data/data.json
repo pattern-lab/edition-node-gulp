@@ -5,7 +5,7 @@
   "btnText" : "Button",
   "btnClass" : "btn-secondary",
   "btnAriaLabelledby": "Button",
-  "tagText" : "Default",
+  "tagText" : "default",
   "tagClass" : "tag-default",
   "img": {
     "avatar": {
