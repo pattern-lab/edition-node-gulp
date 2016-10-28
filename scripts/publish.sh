@@ -37,3 +37,5 @@ main () {
   setUserInfo
   deploySite
 }
+
+main
