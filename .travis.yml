@@ -6,4 +6,4 @@ script:
   - npm run gulp patternlab:build
 
 after_success:
-  - ./scripts/publish-ghpages.sh
+  - ./scripts/publish.sh
