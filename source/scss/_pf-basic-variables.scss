@@ -178,6 +178,12 @@ $font-size-h3: 1.3333rem; // ~16px
 $font-size-h4: 1.2rem;
 $font-size-h5: 1.0833rem; // ~13px
 
+// Use relative font sizes when font size should vary with the parent
+$font-size-relative-base: 1em !default;
+$font-size-relative-lg:   1.25em !default;
+$font-size-relative-sm:   .875em !default;
+$font-size-relative-xs:   .75em !default;
+
 $line-height-base: 1.66666667;
 
 $headings-font-weight: $pf-font-weight-bold;
@@ -330,3 +336,24 @@ $pagination-active-border:             $btn-secondary-border !default;
 // $pagination-disabled-color:            $gray-light !default;
 // $pagination-disabled-bg:               #fff !default;
 $pagination-disabled-border:           $color-pf-black-300;
+
+// Tags
+
+// $tag-default-bg:            $gray-light !default;
+// $tag-primary-bg:            $brand-primary !default;
+// $tag-success-bg:            $brand-success !default;
+// $tag-info-bg:               $brand-info !default;
+// $tag-warning-bg:            $brand-warning !default;
+// $tag-danger-bg:             $brand-danger !default;
+
+// $tag-color:                 #fff !default;
+// $tag-link-hover-color:      #fff !default;
+$tag-font-size:             $font-size-relative-base;
+$tag-font-weight:           $pf-font-weight-bold;
+// $tag-padding-x:             .4em !default;
+// $tag-padding-y:             .25em !default;
+
+// $tag-pill-padding-x:        .6em !default;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+// $tag-pill-border-radius:    10rem !default;
