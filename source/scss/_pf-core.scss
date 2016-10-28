@@ -2,7 +2,6 @@
  * Patternfly Core
  */
 
-
 // Core variables and mixins
 @import "pf-basic-colors";
 @import "pf-basic-variables";
@@ -10,12 +9,16 @@
 @import "pf-basic-mixins";
 @import "node_modules/bootstrap/scss/mixins";
 
+// Import Icon Fonts
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "pf-basic-icons";
+
+// Import Overpass Font
+@import "pf-basic-fonts";
+
 // Reset and dependencies
 @import "node_modules/bootstrap/scss/normalize";
 @import "node_modules/bootstrap/scss/print";
-
-// Import Overpass & Icon Fonts
-@import "pf-basic-fonts";
 
 // Core CSS
 @import "node_modules/bootstrap/scss/reboot";

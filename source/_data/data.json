@@ -2,6 +2,8 @@
   "key": "value",
   "key2": "use this for variables you want to load globally",
   "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
+  "iconFamily" : "pficon",
+  "iconName" : "pficon-home",
   "btnText" : "Button",
   "btnClass" : "btn-secondary",
   "btnAriaLabelledby": "Button",
