@@ -219,23 +219,12 @@
 .#{$pf-icon-prefix}-zone:before {
   content: $pficon-var-zone;
 }
-
-@mixin pficon-circle($width-height, $font-size, $line-height) {
-  width: $width-height;
-  height: $width-height;
-  font-size: $font-size;
-  line-height: $line-height;
-  text-align: center;
-  border: 2px solid $color-pf-blue-300;
-  border-radius: 50%;
+.pf-icon-circle-lg {
+  @include pf-icon-circle($icon-size-lg);
 }
-// line-height value should be 4px less than width-height value to accommodate 2px border on each side
-.pficon-circle-lg {
-  @include pficon-circle(106px, 46px, 102px);
+.pf-icon-circle-md {
+  @include pf-icon-circle($icon-size-md);
 }
-.pficon-circle-md {
-  @include pficon-circle(54px, 23px, 50px);
-}
-.pficon-circle-sm {
-  @include pficon-circle(calc(2rem + 4px), $font-size-relative-base, 2rem);
+.pf-icon-circle-base {
+  @include pf-icon-circle($font-size-relative-base);
 }

@@ -65,3 +65,15 @@
     }
   }
 }
+// Display circle around the icon
+@mixin pf-icon-circle($font-size) {
+  width: calc(2em + 4px);
+  height: calc(2em + 4px);
+  font-size: $font-size;
+  line-height: 2em;
+  text-align: center;
+  border: 2px solid $color-pf-blue-300;
+  border-radius: 50%;
+}
+// width/height value should be 4px (i.e. 2 x border-width) greater than
+// line-height value to accommodate 2px border on each side
