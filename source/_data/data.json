@@ -9,6 +9,9 @@
   "btnAriaLabelledby": "Button",
   "tagText" : "default",
   "tagClass" : "tag-default",
+  "dropdownText" : "Dropdown",
+  "dropdownAriaLabelledby": "Dropdown",
+  "dropdownList": ["Action", "Another action", "Something else here"],
   "img": {
     "avatar": {
       "src": "http://placeimg.com/100/100/people",
