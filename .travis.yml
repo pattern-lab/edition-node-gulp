@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - '4'
+
+script:
+  - npm run gulp patternlab:build
+
+after_success:
+  - ./scripts/publish.sh
