@@ -44,6 +44,7 @@ deploySite () {
   REPO=`git config remote.origin.url`
   SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
   SHA=`git subtree split --prefix public master`
+  echo "Pushing commit ${SHA} to repo ${SSH_REPO}."
   git push ${SSH_REPO} ${SHA}:gh-pages --force
 }
 
