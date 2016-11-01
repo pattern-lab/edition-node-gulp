@@ -10,6 +10,18 @@ setUserInfo () {
   git config --global push.default simple
 }
 
+getDeployKey () {
+  # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
+  ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
+  ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
+  ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
+  ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
+  openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in deploy_key.enc -out deploy_key -d
+  chmod 600 deploy_key
+  eval `ssh-agent -s`
+  ssh-add deploy_key
+}
+
 checkRepoSlug () {
   REPO_SLUG="${1:-patternfly/patternfly}"
   REPO_BRANCH="${2:-master}"
@@ -29,12 +41,15 @@ checkRepoSlug () {
 deploySite () {
   git add -f public
   git commit -m'Added public folder'
-  git push origin `git subtree split --prefix public master`:gh-pages --force
+  REPO=`git config remote.origin.url`
+  SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
+  git push $SSH_REPO `git subtree split --prefix public master`:gh-pages --force
 }
 
 main () {
   checkRepoSlug "patternfly/patternfly-atomic" "master"
   setUserInfo
+  getDeployKey
   deploySite
 }
 
