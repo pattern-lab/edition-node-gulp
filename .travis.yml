@@ -7,6 +7,10 @@ env:
   - ENCRYPTION_LABEL: "02f48b5e2393"
   - COMMIT_AUTHOR_EMAIL: "patternfly-build@redhat.com"
 
+cache:
+  directories:
+    - node_modules
+
 script:
   - npm run gulp patternlab:build
 
