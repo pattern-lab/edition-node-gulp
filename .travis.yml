@@ -2,6 +2,11 @@ language: node_js
 node_js:
   - '4'
 
+env:
+  global:
+  - ENCRYPTION_LABEL: "02f48b5e2393"
+  - COMMIT_AUTHOR_EMAIL: "patternfly-build@redhat.com"
+
 script:
   - npm run gulp patternlab:build
 
