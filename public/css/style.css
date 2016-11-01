@@ -1,0 +1,30 @@
+/*
+ * YOUR STYLES HERE
+ */
+
+.sg-pattern-extra.active{
+  max-height: 100em!important;
+}
+.sg-pattern-desc table{
+  width: 100%;
+}
+.sg-pattern-desc td, th, tr{
+  border: 1px solid rgba(0,0,0,.1);
+  vertical-align: top;
+  padding: .5em;
+}
+.sg-pattern-desc th{
+  background: rgba(0,0,0,.05);
+}
+.sg-pattern-desc table strong {
+  display: block;
+  margin-top: .5em;
+ }
+ .sg-pattern-desc table strong:first-child {
+   margin: 0;
+ }
+
+ .sg-pattern-desc h2{
+   font-size: 1.2rem;
+   /*text-transform: uppercase;*/
+ }
