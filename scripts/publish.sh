@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#set -o errexit -o nounset
+set -o errexit -o nounset
 
 # When running this script on TRAVIS, first run the "setup-git-env.sh" script to set the git username accordingly
 
@@ -43,7 +43,8 @@ deploySite () {
   git commit -m'Added public folder'
   REPO=`git config remote.origin.url`
   SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
-  git push $SSH_REPO `git subtree split --prefix public master`:gh-pages --force
+  SHA=`git subtree split --prefix public master`
+  git push ${SSH_REPO} ${SHA}:gh-pages --force
 }
 
 main () {
