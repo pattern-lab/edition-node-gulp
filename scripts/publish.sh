@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -o errexit -o nounset
+#set -o errexit -o nounset
 
 # When running this script on TRAVIS, first run the "setup-git-env.sh" script to set the git username accordingly
 
