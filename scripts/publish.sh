@@ -39,7 +39,8 @@ checkRepoSlug () {
 }
 
 deploySite () {
-  git add -f public
+  sed -i '/public/d' .gitignore
+  git add -f public .gitignore
   git commit -m'Added public folder'
   REPO=`git config remote.origin.url`
   SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
