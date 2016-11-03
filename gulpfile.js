@@ -78,7 +78,7 @@ gulp.task('pl-copy:styleguide-css', function(){
 ******************************************************/
 //read all paths from our namespaced config file
 var config = require('./patternlab-config.json'),
-  patternlab = require('patternlab-node')(config);
+  patternlab = require('pf-patternlab-node')(config);
 
 function paths() {
   return config.paths;
@@ -141,7 +141,7 @@ gulp.task('patternlab:build', gulp.series('pl-scss', 'pl-assets', build, functio
 ******************************************************/
 // watch task utility functions
 function getSupportedTemplateExtensions() {
-  var engines = require('./node_modules/patternlab-node/core/lib/pattern_engines');
+  var engines = require('./node_modules/pf-patternlab-node/core/lib/pattern_engines');
   return engines.getSupportedFileExtensions();
 }
 function getTemplateWatches() {
