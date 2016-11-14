@@ -153,9 +153,15 @@ function reloadCSS() {
   browserSync.reload('*.css');
 }
 
+function reloadJS() {
+  browserSync.reload('*.js');
+}
+
 function watch() {
   gulp.watch(resolvePath(paths().source.css) + '/**/*.css', { awaitWriteFinish: true }).on('change', gulp.series('pl-copy:css', reloadCSS));
   gulp.watch(resolvePath(paths().source.styleguide) + '/**/*.*', { awaitWriteFinish: true }).on('change', gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reloadCSS));
+
+  gulp.watch(resolvePath(paths().source.js) + '/**/*.js', { awaitWriteFinish: true }).on('change', gulp.series('pl-copy:js', reloadJS));
 
   var patternWatches = [
     resolvePath(paths().source.patterns) + '/**/*.json',
