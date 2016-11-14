@@ -79,8 +79,8 @@ function getConfiguredCleanOption() {
   return config.cleanPublic;
 }
 
-function build(done) {
-  patternlab.build(done, getConfiguredCleanOption());
+function build() {
+  return patternlab.build(() => {}, getConfiguredCleanOption());
 }
 
 gulp.task('pl-assets', gulp.series(
@@ -122,9 +122,7 @@ gulp.task('patternlab:loadstarterkit', function (done) {
   done();
 });
 
-gulp.task('patternlab:build', gulp.series('pl-assets', build, function(done){
-  done();
-}));
+gulp.task('patternlab:build', gulp.series('pl-assets', build));
 
 gulp.task('patternlab:installplugin', function (done) {
   patternlab.installplugin(argv.plugin);
