@@ -79,24 +79,32 @@ function getConfiguredCleanOption() {
   return config.cleanPublic;
 }
 
-function build() {
-  return patternlab.build(() => {}, getConfiguredCleanOption());
+/**
+ *
+ * @param {function} done - Gulp done callback
+ */
+function build(done) {
+  const buildPromise = patternlab.build(() => {}, getConfiguredCleanOption());
+
+  // handle async version of Pattern Lab
+  if (buildPromise instanceof Promise) {
+    return buildPromise.then(done);
+  }
+
+  // handle sync version of Pattern Lab
+  done();
+  return null;
 }
 
-gulp.task('pl-assets', gulp.series(
-  gulp.parallel(
-    'pl-copy:js',
-    'pl-copy:img',
-    'pl-copy:favicon',
-    'pl-copy:font',
-    'pl-copy:css',
-    'pl-copy:styleguide',
-    'pl-copy:styleguide-css'
-  ),
-  function(done){
-    done();
-  })
-);
+gulp.task('pl-assets', gulp.parallel(
+  'pl-copy:js',
+  'pl-copy:img',
+  'pl-copy:favicon',
+  'pl-copy:font',
+  'pl-copy:css',
+  'pl-copy:styleguide',
+  'pl-copy:styleguide-css'
+));
 
 gulp.task('patternlab:version', function (done) {
   patternlab.version();
@@ -122,7 +130,7 @@ gulp.task('patternlab:loadstarterkit', function (done) {
   done();
 });
 
-gulp.task('patternlab:build', gulp.series('pl-assets', build));
+gulp.task('patternlab:build', gulp.parallel('pl-assets', build));
 
 gulp.task('patternlab:installplugin', function (done) {
   patternlab.installplugin(argv.plugin);
