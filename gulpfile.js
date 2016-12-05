@@ -167,8 +167,6 @@ function watch() {
     resolvePath(paths().source.annotations) + '/*'
   ].concat(getTemplateWatches());
 
-  console.log(patternWatches);
-
   gulp.watch(patternWatches, { awaitWriteFinish: true }).on('change', gulp.series(build, reload));
 }
 
