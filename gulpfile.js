@@ -209,6 +209,7 @@ function watch() {
         normalizePath(paths().source.data, '**', '*.json'),
         normalizePath(paths().source.fonts, '**', '*'),
         normalizePath(paths().source.images, '**', '*'),
+        normalizePath(paths().source.js, '**', '*'),
         normalizePath(paths().source.meta, '**', '*'),
         normalizePath(paths().source.annotations, '**', '*')
       ].concat(getTemplateWatches()),
