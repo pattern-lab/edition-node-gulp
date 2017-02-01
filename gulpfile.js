@@ -16,47 +16,47 @@ function resolvePath(pathInput) {
  * COPY TASKS - stream assets from source to destination
 ******************************************************/
 // JS copy
-gulp.task('pl-copy:js', function(){
   return gulp.src('**/*.js', {cwd: resolvePath(paths().source.js)} )
     .pipe(gulp.dest(resolvePath(paths().public.js)));
+gulp.task('pl-copy:js', function () {
 });
 
 // Images copy
-gulp.task('pl-copy:img', function(){
   return gulp.src('**/*.*',{cwd: resolvePath(paths().source.images)} )
     .pipe(gulp.dest(resolvePath(paths().public.images)));
+gulp.task('pl-copy:img', function () {
 });
 
 // Favicon copy
-gulp.task('pl-copy:favicon', function(){
   return gulp.src('favicon.ico', {cwd: resolvePath(paths().source.root)} )
     .pipe(gulp.dest(resolvePath(paths().public.root)));
+gulp.task('pl-copy:favicon', function () {
 });
 
 // Fonts copy
-gulp.task('pl-copy:font', function(){
   return gulp.src('*', {cwd: resolvePath(paths().source.fonts)})
     .pipe(gulp.dest(resolvePath(paths().public.fonts)));
+gulp.task('pl-copy:font', function () {
 });
 
 // CSS Copy
-gulp.task('pl-copy:css', function(){
   return gulp.src(resolvePath(paths().source.css) + '/*.css')
     .pipe(gulp.dest(resolvePath(paths().public.css)))
+gulp.task('pl-copy:css', function () {
     .pipe(browserSync.stream());
 });
 
 // Styleguide Copy everything but css
-gulp.task('pl-copy:styleguide', function(){
   return gulp.src(resolvePath(paths().source.styleguide) + '/**/!(*.css)')
     .pipe(gulp.dest(resolvePath(paths().public.root)))
+gulp.task('pl-copy:styleguide', function () {
     .pipe(browserSync.stream());
 });
 
 // Styleguide Copy and flatten css
-gulp.task('pl-copy:styleguide-css', function(){
   return gulp.src(resolvePath(paths().source.styleguide) + '/**/*.css')
     .pipe(gulp.dest(function(file){
+gulp.task('pl-copy:styleguide-css', function () {
       //flatten anything inside the styleguide into a single output dir per http://stackoverflow.com/a/34317320/1790362
       file.path = path.join(file.base, path.basename(file.path));
       return resolvePath(path.join(paths().public.styleguide, '/css'));
@@ -205,8 +205,8 @@ gulp.task('patternlab:connect', gulp.series(function(done) {
         'text-align: center'
       ]
     }
-  }, function(){
     console.log('PATTERN LAB NODE WATCHING FOR CHANGES');
+  }, function () {
     done();
   });
 }));
