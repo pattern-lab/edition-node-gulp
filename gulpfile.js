@@ -97,15 +97,16 @@ function getConfiguredCleanOption() {
 }
 
 /**
- *
+ * Performs the actual build step. Accomodates both async and sync
+ * versions of Pattern Lab.
  * @param {function} done - Gulp done callback
  */
 function build(done) {
-  const buildPromise = patternlab.build(() => {}, getConfiguredCleanOption());
+  const buildResult = patternlab.build(() => {}, getConfiguredCleanOption());
 
   // handle async version of Pattern Lab
-  if (buildPromise instanceof Promise) {
-    return buildPromise.then(done);
+  if (buildResult instanceof Promise) {
+    return buildResult.then(done);
   }
 
   // handle sync version of Pattern Lab
