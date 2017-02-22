@@ -218,11 +218,11 @@ function watch() {
     }
   ];
 
-  for (const watcher of watchers) {
+  watchers.forEach(watcher => {
     console.log('\n' + chalk.bold('Watching ' + watcher.name + ':'));
     watcher.paths.forEach(p => console.log('  ' + p));
     gulp.watch(watcher.paths, watcher.config, watcher.tasks);
-  }
+  });
   console.log();
 }
 
