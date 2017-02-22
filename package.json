@@ -25,7 +25,7 @@
   "bugs": "https://github.com/pattern-lab/edition-node-gulp/issues",
   "author": "Brian Muenzenmeyer",
   "scripts": {
-    "start": "node_modules/gulp/bin/gulp.js patternlab:serve",
+    "start": "gulp patternlab:serve",
     "postinstall": "node scripts/postinstall.js",
     "gulp": "gulp -- "
   },
