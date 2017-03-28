@@ -1,14 +1,14 @@
 <div class="form-group radio-group">
-<fieldset>
-<legend>Foo Bar:</legend>
-<div class="radio-controls">
-<label>
-@Html.RadioButtonFor(x => x.fooBar, false, new { @class = "form-control" }) No
- </label>
- <label>
- 	@Html.RadioButtonFor(x => x.fooBar, true, new { @class = "form-control" }) Yes
-</label>
-</div>
-</fieldset>
-@Html.ICONValidationMessageFor(x => x.fooBar)
+	<fieldset>
+		<legend>Foo Bar:</legend>
+		<div class="radio-controls">
+			<label>
+				@Html.RadioButtonFor(x => x.fooBar, false, new { @class = "form-control" }) No
+	 		</label>
+	 		<label>
+	 			@Html.RadioButtonFor(x => x.fooBar, true, new { @class = "form-control" }) Yes
+			</label>
+		</div>
+	</fieldset>
+	@Html.ICONValidationMessageFor(x => x.fooBar)
 </div>
