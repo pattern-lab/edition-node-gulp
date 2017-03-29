@@ -8,7 +8,7 @@
 	else
 	{
 		@Html.ValidationMessage("Save")
-		if (!Model.IsRelayMessageValid)
+		@if (!Model.IsRelayMessageValid)
 		{
 			<button type="submit" class="btn btn-primary">Save and Send</button>
 			<button type="button" class="btn btn-next">Next</button>

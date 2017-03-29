@@ -3,9 +3,15 @@
 		<legend>Foo Bar:</legend>
 		<div class="checkbox-controls">
 			<label>
-				@Html.CheckBoxFor(x => Model.fooBar, new { @class = "form-control" })Foo Yeah
+			    <input id='fooBar' name='fooBar' type="checkbox" class="form-control"  value="true" />
+			    Foo Bar
+		    	<!--
+						Razor alternative: @Html.CheckBoxFor(x => Model.fooBar, new { @class = "form-control" })
+				-->
 			</label>
 		</div>
-		@Html.ICONValidationMessageFor(x => x.fooBar)
+		<!-- 
+				Razor Validation: @Html.ICONValidationMessageFor(x => x.fooBar)
+		-->
 	</fieldset>
 </div>
