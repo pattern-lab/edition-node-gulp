@@ -1,3 +1,7 @@
+![Pattern Lab Logo](/patternlab.png "Pattern Lab Logo")
+
+![current release](https://img.shields.io/github/release/pattern-lab/edition-node-gulp.svg) ![license](https://img.shields.io/github/license/pattern-lab/edition-node-gulp.svg) [![Join the chat at Gitter](https://badges.gitter.im/pattern-lab/node.svg)](https://gitter.im/pattern-lab/node)
+
 # Pattern Lab Node - Gulp Edition
 
 The Gulp wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node) providing tasks to interact with the core library and move supporting frontend assets.
