@@ -52,3 +52,6 @@
   font-size: 90%;
   line-height: 1;
 }
+
+h3.sg-pattern-title {font-family: "Roboto Slab", "HelveticaNeue", Arial, Helvetica, sans-serif !important; font-size: 0.95rem !important;}
+.sg-pattern-title a {font-weight: 400 !important;}
