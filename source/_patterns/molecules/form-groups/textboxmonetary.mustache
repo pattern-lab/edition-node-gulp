@@ -1,6 +1,16 @@
 <div class="form-group input-group money">
-	@Html.LabelFor(x => x.fooBar, "Foo Bar")
+	<label>
+		Money Input
+		<!-- 
+			Razor Alternative
+				@Html.LabelFor(x => x.fooBar, "Foo Bar")
+		-->
 	<span class="input-group-addon">$</span>
-	@Html.TextBoxFor(x => x.fooBar, new { @class = "form-control form-amount" })
-	@Html.ICONValidationMessageFor(x => x.fooBar)
+	<input name="fooBar" class="form-control form-amount" />
+	<!--
+		Razor Alternative
+			@Html.TextBoxFor(x => x.fooBar, new { @class = "form-control form-amount" })
+			@Html.ICONValidationMessageFor(x => x.fooBar)
+	-->
+
 </div>

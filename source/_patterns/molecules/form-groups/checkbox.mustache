@@ -1,17 +1,15 @@
 <div class="form-group checkbox-group">
-	<fieldset>
-		<legend>Foo Bar:</legend>
-		<div class="checkbox-controls">
-			<label>
-			    <input id='fooBar' name='fooBar' type="checkbox" class="form-control"  value="true" />
-			    Foo Bar
-		    	<!--
-						Razor alternative: @Html.CheckBoxFor(x => Model.fooBar, new { @class = "form-control" })
-				-->
-			</label>
-		</div>
-		<!-- 
-				Razor Validation: @Html.ICONValidationMessageFor(x => x.fooBar)
+	<div class="checkbox-controls">
+		<label>
+		    Check box
+		    <input name='fooBar' type="checkbox" class="form-control"  value="true" />
+		    
+	    	<!--
+					Razor alternative: @Html.CheckBoxFor(x => Model.fooBar, new { @class = "form-control" })
+			-->
+		</label>
+	</div>
+	<!-- 
+			Razor Validation: @Html.ICONValidationMessageFor(x => x.fooBar)
 		-->
-	</fieldset>
 </div>

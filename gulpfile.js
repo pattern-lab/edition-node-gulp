@@ -53,7 +53,9 @@ gulp.task('pl-copy:favicon', function () {
 
 // Fonts copy
 gulp.task('pl-copy:font', function () {
-  return gulp.src('*', {cwd: normalizePath(paths().source.fonts)})
+  return gulp.src(
+        // normalizePath(paths().source.fonts), 
+        'node_modules/bootstrap/dist/fonts/*')
     .pipe(gulp.dest(normalizePath(paths().public.fonts)));
 });
 
@@ -65,15 +67,15 @@ gulp.task('pl-copy:css', function () {
 });
 
 gulp.task('pl-concat:css', function() {
-  return gulp.src(
+  return gulp.src([
       'node_modules/bootstrap/dist/css/bootstrap.css',
       'node_modules/bootstrap/dist/css/bootstrap-theme.css',
-      'node_modules/chosen-npm/chosen.css',
+      'node_modules/chosen-npm/public/chosen.css',
       'node_modules/datatables/media/css/jquery.dataTables.css',
       'node_modules/jqueryui/jquery-ui.css',
-      'node_modules/bootstrap/dist/css/bootstrap-datepicker.css',
-
+      'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css',
       normalizePath(paths().source.css) + '/icon-style.css'
+      ]
     )
   .pipe(concat("style.css"))
   .pipe(gulp.dest(normalizePath(paths().public.css)));

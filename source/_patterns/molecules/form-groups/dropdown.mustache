@@ -1,5 +1,15 @@
 <div class="form-group select-group">
-	@Html.LabelFor(x => x.fooBar, "fooBar")
-   	@Html.DropDownListFor(x => x.fooBar, Model.fooBar, new { @class = "form-control chosen" })
-   	@Html.ICONValidationMessageFor(x => x.fooBar)
+	<label>
+		Select List
+		<select name="fooBar" class="form-control chose">
+			<option>Option 1</option>
+			<option>Option 2</option>
+		</select>
+	</label>
+	<!--
+		Razor Alternative: 
+		@Html.LabelFor(x => x.fooBar, "fooBar")
+   		@Html.DropDownListFor(x => x.fooBar, Model.fooBar, new { @class = "form-control chosen" })
+   		@Html.ICONValidationMessageFor(x => x.fooBar)
+   	-->
 </div>
