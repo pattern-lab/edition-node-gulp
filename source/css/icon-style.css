@@ -3,11 +3,11 @@
   * Strict pixel size for navbar as resizing it will wreck layout *
   * All other padding is in relative units and subject to whims of the developer *
 */
-
-
-
+ 
+ 
+ 
 /*************** GLOBAL ***************/
-
+ 
 html, body { font-family: 'Roboto', Arial, Helvetica, sans-serif; font-size: 16px;}
 body, .body { background-color: #eee; }
 nav { padding: 0; }
@@ -23,10 +23,10 @@ h3, .h3 { font-size: 1.4rem /* 22.4px */; margin: 0;}
 h4, .h4 {font-size: 1.15rem; margin: 0;}
 h1, h2, h3, p {color: #212121;}
 .glyphicon { font-weight: 400 !important; }
-
+ 
 .main .container-fluid h1 {margin-bottom: 1em;}
-
-
+ 
+ 
 /*************** BUTTONS ***************/
 .btn { border-radius: 0; border: none; }
 .btn-primary { background-color: #0099ff; color: #fff; }
@@ -36,7 +36,7 @@ h1, h2, h3, p {color: #212121;}
 .btn-primary:active, .btn-primary.active { background-color: #000; }
 .btn.btn-return { background-color: transparent; color: #0099ff; margin-left: 6em; }
 .btn-return:hover { background-color: transparent; color: #174a7c; }
-
+ 
 button.btn { padding: 1em 1.5em; text-transform: uppercase; color: #fff; }
 button.btn-next, button.btn-next.active { background-color: #5c9723; color: #fff; margin-left: 5%; }
 button.btn-next:disabled { background-color: #d6d6d6; color: #999; }
@@ -46,22 +46,22 @@ button.btn-next:hover { background-color: darkgreen; color: #fff; }
     button.btn-add:active, button.btn-add.active { box-shadow: none; }
     button.btn-add:before { content: '+\0020\0020'; }
 */
-
+ 
 button.btn-secondary.btn-add:hover {background-color: #5c9723; color: #fff; }
 button.btn-secondary.btn-remove:hover {background-color: tomato; color: #fff;}
-
+ 
 a.btn-secondary, button.btn-secondary { background-color: #f3f3f3; color: #333; padding: 8px 10px;}
 a.btn-secondary:hover, a.btn-secondary:focus, a.btn-secondary:active { background-color: #d9d9d9; color: #000; box-shadow: none;}
 button.btn-secondary:hover, button.btn-secondary:focus, button.btn-secondary:active { background-color: #d9d9d9; color: #000; box-shadow: none;}
-
+ 
 .btn-danger { background-color: tomato; }
 .btn-success { background-color: #5c9723; }
 .btn-danger:hover, .btn-danger:active, .btn-danger:active:hover, .btn-danger:focus { background-color: tomato; color: #fff; box-shadow: none; }
 .btn-success:hover, .btn-success:active, .btn-success:focus, .btn-success:active:hover { background-color: #5c9723; color: #fff; box-shadow: none; }
 .btn i.glyphicon { padding-right: 5px; vertical-align: top; }
-
+ 
 .chosen-container + a.btn { margin-top: 1em;}
-
+ 
 /*
 .btn-secondary { background-color: #5c9723; color: #fff; }
 .btn-secondary:hover { background-color: #3F730D; color: #fff; }
@@ -69,13 +69,13 @@ button.btn-secondary:hover, button.btn-secondary:focus, button.btn-secondary:act
 .btn-default { background-color: #f3f3f3; color: #333; }
 .btn-default:hover { background-color: #e9e9e9; color: #111; }
 */
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 /*************** NAVBAR ***************/
-
+ 
 .navbar {padding: 0; min-height: 50px; border: none; background-color: #174a7c; border-radius: 0; padding: 0; margin: 0 -15px;}
 .navbar a { min-height: 50px; }
 .navbar a.navbar-brand { background-color: #103a63; }
@@ -95,8 +95,8 @@ button.btn-secondary:hover, button.btn-secondary:focus, button.btn-secondary:act
 ul.dropdown-sublist { display: block; padding: 0; width: 250px; float: left; list-style-type: none; }
 ul.dropdown-sublist li a { padding: 8px; }
 .navbar ul.dropdown-menu li.sublist-title { padding-left: 1em; font-size: 1.1em; font-weight: 700; }
-
-
+ 
+ 
         /*
           * Commented out until need for megamenu appears again *
           * !Yamm! - Yet another megamenu for Bootstrap http://geedmo.github.com/yamm *
@@ -106,17 +106,17 @@ ul.dropdown-sublist li a { padding: 8px; }
           .nav > li.open .megamenu a { background-color: transparent; color: #333; }
           .nav > li.open .megamenu a { background-color: transparent; color: #333; }.navbar a.navbar-brand { margin-right: 24px; }
         */
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** SIDEBAR ***************/
-
+ 
 .sidebar { background-color: #f9f9f9; border: 1px solid #e9e9e9; }
 .sidebar h1 {padding: 16px; text-align: center; font-size: 1.4em; /* sidebar h1 is just in demo atm */}
 .sidebar img { width: 150px; margin: 16px auto 960px; }
-
-
+ 
+ 
         /*
           * Commented out until we get working sample installed *
           .sidebar h3 { color: #999; margin: 0 0 1em; padding: 0; }
@@ -125,10 +125,10 @@ ul.dropdown-sublist li a { padding: 8px; }
           .sidebar ul li.active a, .sidebar-nav ul li a:focus { background-color: #66c8ff; color: #fff; }
           .sidebar ul li a span { padding-left: 3em; white-space: nowrap; }
         */
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** TABLES ***************/
 .table {font-size: 0.9rem;}
 .table thead tr { background-color: #e9e9e9; }
@@ -136,10 +136,10 @@ ul.dropdown-sublist li a { padding: 8px; }
 .table > tbody > tr > td { text-align: center; }
 .form-section table { margin: 0; padding: 0; }
 h4 + .table {margin-top: 1em;}
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** STAGING AREA ***************/
 .staging-area { margin-top: 16px; }
 .staging-container { font-size: 0.75em; padding: 1em; border: 1px solid #ccc; background-color: #fdfdfd; }
@@ -148,7 +148,7 @@ h4 + .table {margin-top: 1em;}
 .title-bar { border-bottom: 1px dotted #ccc; padding-bottom: 8px; margin-bottom: 16px; }
 div.success-bar { padding: 16px; background-color: #5c9723; color: #fff; font-size: 1.35em; margin-bottom: 1em; }
 .success-bar h3 { padding: 0; margin: 0; color: #fff; }
-
+ 
         /*
           * Need these? *
           .staging-content { width: 100%; }
@@ -156,114 +156,112 @@ div.success-bar { padding: 16px; background-color: #5c9723; color: #fff; font-si
           .validation-summary-errors li { float: left; padding: 0; margin: 0 5em 1em 0; color: crimson; }
           .validation-summary-errors ul { list-style-type: decimal; padding-left: 0; }
         */
-
-
-
+ 
+ 
+ 
 /*************** STATIC INFO ***************/
-
+ 
 .static-info { font-size: 100%; width: 100%; }
-.form-inline .static-info .form-group { margin: 0; padding: 0 1em 0 0; color: #666; width: 100%; }
-.form-inline .static-info label { width: 45%; color: #333; vertical-align: top; text-align: right; padding-right: 15px; margin: 0 -4px 0 0;}
-.form-inline .static-info input { color: #666; }
-.form-inline > .static-info + .staging-content { border-top: 1px dotted #ccc; margin-top: 16px; padding-top: 8px;}
-
-
-
-
+.static-info .form-group { margin: 0; padding: 0 1em 0 0; color: #666; width: 100%; }
+.static-info label { width: 45%; color: #333; vertical-align: top; text-align: right; padding-right: 15px; margin: 0 -4px 0 0; display: inline-block;}
+.static-info input { color: #666; display: inline-block; width: 55%;}
+form > .static-info + .staging-content { border-top: 1px dotted #ccc; margin-top: 16px; padding-top: 8px;}
+ 
+ 
+ 
+ 
 /*************** FORMS ***************/
-label { font-weight: 400; }
+label { font-weight: 400; padding-right: 15px; text-align: left; margin: 0 -4px 2px 0; width: 100%; color: #212121; display: block;}
 .form-section { margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px dotted #ccc; }
-.form-inline .form-group, .form-group { width: 85%; padding-right: 0; margin-bottom: 0.75em; }
-.form-inline .form-group.row div {padding-right: 0;}
-.form-inline .form-group.row { width: 90%; }
-
+.form-group { width: 85%; padding-right: 0; margin-bottom: 1em; }
+.form-group.row div {padding-right: 0;}
+.form-group.row { width: 90%; }
+ 
 h3.form-group-title { font-size: 1.15em; margin: 0; color: #333; font-weight: 700; text-transform: uppercase; padding: 0.25em 0 1em 0; text-align: left; }
 h3.form-group-title:empty { padding-bottom: 1.55em; }
 .form-group ~ h3.form-group-title { margin-top: 2.5em; }
 h3.form-group-title ~ div.radio-group, h3.form-group-title ~ div.checkbox-group { margin-top: 12px; }
-
-
+ 
+ 
 .field-validation-error { color: Crimson; font-weight: 400; }
 .form-group .field-validation-error { padding: 0.5em 10% 0 0; display: block; }
-.form-inline .form-control.input-validation-error { color: #fff; background-color: Red; border: 1px dotted Crimson; font-weight: bold; text-shadow: 1px 1px 1px rgba(0,0,0,0.5); }
-.form-inline .form-control.input-validation-error:focus { background-color: #fff; border: 1px solid #999; font-weight: 400; text-shadow: none; color: #999; }
-
-
+.form-control.input-validation-error { color: #fff; background-color: Red; border: 1px dotted Crimson; font-weight: bold; text-shadow: 1px 1px 1px rgba(0,0,0,0.5); }
+.form-control.input-validation-error:focus { background-color: #fff; border: 1px solid #999; font-weight: 400; text-shadow: none; color: #999; }
+ 
+ 
 .form-control { border-radius: 3px; font-size: 1em; padding: 0.125rem 0.75rem 0; }
-.form-inline label { padding-right: 15px; text-align: left; margin: 0 -4px 2px 0; width: 100%; color: #212121; }
-.form-inline .comment-group label { margin-right: -4px; vertical-align: top; }
-.form-inline .form-control { float: none; height: 1.75rem; width: 100%; color: #666; }
-.form-inline .staging-container .form-control {text-transform: uppercase;}
-.form-inline textarea.form-control { height: 7em; max-width: 100%; min-width: 100%; }
-.form-inline .form-control.form-amount { text-align: right; }
-
-.form-inline .input-group { display: block; }
-.form-inline .input-group > .form-control { float: none; display: inline-block; width: 89%; margin-right: 1%; padding: 0.125rem 0.75rem 0; }
-.form-inline .input-group .input-group-addon { display: inline-block; margin: 0 -4px 0 0; width: 10%; height: 1.75rem; font-size: 1em; padding: 0.15em; border-radius: 0 3px 3px 0; }
-.staging-container .form-inline .input-group .input-group-addon { line-height: 1.75;}
-
-
+.comment-group label { margin-right: -4px; vertical-align: top; }
+.form-control { float: none; height: 1.75rem; width: 100%; color: #666; }
+.staging-container .form-control {text-transform: uppercase;}
+textarea.form-control { height: 7em; max-width: 100%; min-width: 100%; }
+.form-control.form-amount { text-align: right; }
+ 
+.input-group { display: block; }
+.input-group > .form-control {display: inline-block; width: 90%; padding: 0.125rem 0.75rem 0; vertical-align: top; float: none;}
+.input-group .input-group-addon { display: inline-block; margin: 0 -4px 0 0; width: 10%; height: 1.75rem; font-size: 1em; padding: 0.15em; border-radius: 0 3px 3px 0; vertical-align: top; line-height: 1.5;}
+ 
+ 
 .input-group-addon { cursor: pointer; background-color: #cdebf9; color: #555; border: 1px solid #ddd; }
 .input-group-addon:hover { background-color: #ddd; color: #000; }
 .input-group.money .input-group-addon { background-color: #f5f5f5; border: 1px solid #ccc; }
-.form-inline .input-group.money .input-group-addon { line-height: 1.75; }
-.form-inline .input-group.money .input-group-addon:hover { background-color: #f5f5f5; color: #555; cursor: default; }
+.input-group.money .input-group-addon { line-height: 1.5; }
+.input-group.money .input-group-addon:hover { background-color: #f5f5f5; color: #555; cursor: default; }
 .input-group .control-label { display: inline-block; vertical-align: middle; }
 .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child), .input-group .form-control:not(:first-child):not(:last-child) { border-radius: 3px 0 0 3px; }
-
-
+ 
+ 
 .radio-group {margin: 0 0 0.5em;}
 .form-group ~ .radio-group, .form-group ~ .checkbox-group {margin-top: 1.5em;}
 .radio-controls, .checkbox-controls { display: inline-block; width: 50%; color: #333; margin-right: -4px; }
 .checkbox-group.no-legend .checkbox-controls { width: 100%; }
-.form-inline .radio-controls label, .form-inline .checkbox-controls label { padding: 0; text-align: left; margin: 0 -4px 0.5em 0; width: 50%; color: #212121; cursor: pointer;}
-.form-inline input.form-control[type="checkbox"] { font-size: 1em; margin: 0 3px 0 0; height: 1rem; width: 1rem; }
-.form-inline input.form-control[type="radio"] { font-size: 1em; margin: 0 3px 0 0; height: 1em; width: 1em; }
+.radio-controls label,  .checkbox-controls label { padding: 0; text-align: left; margin: 0 -4px 0.5em 0; width: 50%; color: #212121; cursor: pointer; display: inline-block; vertical-align: middle;}
+input.form-control[type="checkbox"], input.form-control[type="radio"] { font-size: 1em; margin: 0 3px 0 0; height: 1rem; width: 1rem; display: inline-block; vertical-align: middle;}
 .radio-group .form-control { box-shadow: none; margin-top: 0; }
 .form-group.radio-group legend, .form-group.checkbox-group legend { display: block; float: left; width: 45%; padding: 0 15px 0 0; margin-bottom: 0; font-size: 1em; line-height: 1.35; color: #212121; border-bottom: 0; }
-.form-inline .checkbox-group.no-legend {width: 100%;}
-.form-inline .checkbox-group.no-legend .checkbox-controls label {width: 100%;}
-
-.form-inline .list-group .form-control {height: auto;}
-.form-inline .container-fluid .form-group.list-group + .button-group {margin-top: 1em;}
-
+.checkbox-group.no-legend {width: 100%;}
+.checkbox-group.no-legend .checkbox-controls label {width: 100%;}
+ 
+.list-group .form-control {height: auto;}
+.container-fluid .form-group.list-group + .button-group {margin-top: 1em;}
+ 
 .ui-dialog-content .form-control {width: 100%;}
-
-.form-inline .form-group.button-group { text-align: center; width: 100%; }
+ 
+.form-group.button-group { text-align: center; width: 100%; }
 .form-group.button-group label {width: 100%; text-align: left; margin: 12px -4px 2px 0; }
-
-
+ 
+ 
 div.success-message { padding: 1em 1.5em; text-transform: none; font-size: 1.2em; background-color: #5c9723; display: inline-block; color: #fff; }
 div.success-message i { padding-right: 5px; }
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** PANELS ***************/
-.form-inline .panel label {margin-top: 0;}
-.form-inline .panel .checkbox-group {padding-top: 1em;}
+.panel label {margin-top: 0;}
+.panel .checkbox-group {padding-top: 1em;}
 .panel-heading[data-toggle="collapse"], .panel-heading[data-toggle="collapse"] label {cursor: pointer !important; font-size: 0.95rem;}
 .staging-content > .panel {margin-top: 2em;}
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 /***************  ACCORDION PANELS  ***************/
 /* .panel-heading { cursor: pointer; }  too broad */
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** EMPTY SETS ***************/
 .emptySet-message { text-align: center; }
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** BUSY SPINNER ***************/
-
+ 
 /* AMAZING FLYING CIRCLE 
-
+ 
 .spinner { font-size: 10px; margin: 50px auto; text-indent: -9999em; width: 11em; height: 11em; border-radius: 50%; background: #ff8040; background: -moz-linear-gradient(left, #ff8040 10%, rgba(255,128,64, 0) 42%); background: -webkit-linear-gradient(left, #ff8040 10%, rgba(255,128,64, 0) 42%); background: -o-linear-gradient(left, #ff8040 10%, rgba(255,128,64, 0) 42%); background: linear-gradient(to right, #ff8040 10%, rgba(255,128,64, 0) 42%); position: relative; -webkit-animation: load3 1.4s infinite linear; animation: load3 1.4s infinite linear; -webkit-transform: translateZ(0); -ms-transform: translateZ(0); transform: translateZ(0); }
 .spinner:before { width: 50%; height: 50%; background: #ff8040; border-radius: 100% 0 0 0; position: absolute; top: 0; left: 0; content: ''; }
 .spinner:after { background: #f9ffff; width: 75%; height: 75%; border-radius: 50%; content: ''; margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
@@ -275,12 +273,12 @@ div.success-message i { padding-right: 5px; }
     0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
-
+ 
 */
-
-
+ 
+ 
 /* AMAZING MORPHING FOLDER
-
+ 
 .spinner { width: 70px; height: 70px; background-color: #f966ba; -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out; animation: sk-rotateplane 3.5s infinite ease-in-out; margin: 30px 0 0 30px; }
 @-webkit-keyframes sk-rotateplane {
     0% { -webkit-transform: perspective(120px); }
@@ -297,17 +295,16 @@ div.success-message i { padding-right: 5px; }
     100% { transform: perspective(120px) rotateX(0deg) rotateY(0deg); -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
 }
 */
-
-
-
+ 
+ 
 /*************** ERROR MESSAGES ***************/
-.form-inline .form-control.input-validation-error { background-image: url(../Images/icon-alert.svg); background-position-y: 50%; background-position-x: 95%; background-repeat: no-repeat; background-size: 7%;}
+.form-control.input-validation-error { background-image: url(../Images/icon-alert.svg); background-position-y: 50%; background-position-x: 95%; background-repeat: no-repeat; background-size: 7%;}
 .validation-summary-errors { padding: 1em; background-color: tomato; margin: 1em 0;}
 .validation-summary-errors li { color: #fff; padding-bottom: 0.5em; line-height: 1.25;}
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** DISABLED ELEMENTS ***************/
 .form-control[disabled], fieldset[disabled] .form-control { cursor: not-allowed; }
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control { background-color: #f1f1f1; opacity: 1; }
@@ -316,10 +313,10 @@ fieldset[disabled] + .input-group-addon { cursor: not-allowed; background-color:
 .input-group-addon:hover { background-color: #ddd; color: #000; }
 .chosen-disabled { opacity: 0.75 !important; cursor: not-allowed; }
 .chosen-disabled.chosen-container-active { box-shadow: none; cursor: not-allowed; }
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** DATEPICKER ***************/
 .datepicker { border-radius: 0; }
 .datepicker thead { padding: 1em; }
@@ -334,98 +331,105 @@ fieldset[disabled] + .input-group-addon { cursor: not-allowed; background-color:
 .datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.active, .datepicker table tr td.active.active:hover { background: #4eabc4; color: #fff; }
 .datepicker table tr td.today, .datepicker table tr td.today.disabled:hover { background: #fff; color: #be3b2e; }
 .datepicker table tr td.today:hover, .datepicker table tr td.today:hover:hover { color: #333; background-color: #eee; }
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** CHOSEN JS OVERRIDES ***************/
 .chosen-container {font-size: 1em !important;}
 .staging-container .chosen-container {text-transform: uppercase;}
 .chosen-container .chosen-results { padding-right: 1em; }
 .chosen-container .chosen-results li.highlighted { background-image: none; background-color: #174a7c; color: #fff; }
-.form-inline .chosen-container { font-size: 1em !important; width: 100% !important; position: relative; left: -1px; border-radius: 3px; }
+ .chosen-container { font-size: 1em !important; width: 100% !important; position: relative; left: -1px; border-radius: 3px; }
 .chosen-container-single .chosen-single { border-radius: 0; border: 1px solid #ccc; color: #666; height: 1.75rem; background: #fff; box-shadow: none; border-radius: 3px; line-height: 1.75; padding-left: 0.75rem; }
-.form-inline .select-group .chosen-single span { width: 100%; text-align: left; vertical-align: top; margin-right: 0; }
-.staging-container .form-inline .select-group .chosen-single span {padding-top: 0.2em;} 
+ .select-group .chosen-single span { width: 100%; text-align: left; vertical-align: top; margin-right: 0; }
+.staging-container  .select-group .chosen-single span {padding-top: 0.2em;} 
 .chosen-container-single .chosen-single div { top: 0.1em; }
 .chosen-container-active .chosen-single { box-shadow: none; }
 .chosen-container-active { border-color: #66afe9; outline: 0; -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6); box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6); }
 .chosen-container-active.chosen-with-drop .chosen-single { background-image: none; }
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** DATATABLES OVERRIDES ***************/
 .dataTables_info, .pagination, .dataTables_length {font-size: 0.85em;}
 .pagination > li > a, .pagination > li > span { padding: 6px 12px; margin-left: -1px; color: #337ab7; text-decoration: none; background-color: #fff; border: 0; }
 .pagination > li.previous > a, .pagination > li.next > a {background-color: #f3f3f3; color: #333; margin: 0 0.75em; border-radius: 0;}
 .pagination > li.previous > a:hover, .pagination > li.next > a:hover {background-color: #e9e9e9;}
 .pagination > li.previous.disabled > a, .pagination > li.previous.disabled > a:hover, .pagination > li.next > a, .pagination > li.next > a:hover {background-color: transparent; color: #b6b6b6;}
-
-
-
-
+ 
+ 
+ 
+ 
 /*************** SEARCH PAGE ***************/
-form.form-inline div.search .form-group { width: 100%; }
+form div.search .form-group { width: 100%; }
 .search h4 {padding: 16px; margin: 0;}
 .search h4 a { color: #333; }
-
+ 
 .search-messageTypes {font-size: 0.8em; }
 .search-messageInfo h4 {margin-top: 16px;}
-.form-inline .messageTypes label { width: 50%; margin: 0 -4px 0.75em; padding: 0; color: #333; text-align: right; }
+ .messageTypes label { width: 50%; margin: 0 -4px 0.75em; padding: 0; color: #333; text-align: right; }
 div.messageTypes { padding-right: 16px; }
 .search .checkbox input[type="checkbox"],
 .search .checkbox-inline input[type="checkbox"] { position: relative; margin-left: 6px; margin-top: 4px \9; display: inline-block; }
 .checkbox-inline + .checkbox-inline { margin-left: 0; }
-
-
+ 
+ 
 .messageType-group div { padding: 0; }
 .messageType-buttons a.btn {display: inline-block; margin: 0 5% 1em 16px;}
 .messageType-buttons a.btn.btn-success {margin-right: 0;}
 .messageType-buttons a.btn-danger, .messageType-buttons a.btn-success { background-color: #e9e9e9; color: #333; }
 .messageType-buttons a.btn-danger:hover, .messageTypes a.btn-danger:focus { background-color: tomato; color: #fff; }
 .messageType-buttons a.btn-success:hover, .messageTypes a.btn-success:focus { background-color: #5c9723; color: #fff; }
-
-.form-inline .search-messageInfo .form-group { font-size: 0.9em; padding: 0 16px 0.5em; }
-.form-inline .search-messageInfo label { width: 100%; text-align: left; padding-right: 0; }
-.searchSubmit .btn-primary { display: block; margin: 1em auto; width: 50%; font-size: 1rem; padding: 0.5em;}
-
-
-
-
-/*************** MAIN & CONTAINER-FLUID ***************/
  
+.search-messageInfo .form-group { font-size: 0.9em; padding: 0 16px 0.5em; }
+.search-messageInfo label { width: 100%; text-align: left; padding-right: 0; }
+.searchSubmit .btn-primary { display: block; margin: 1em auto; width: 50%; padding: 0.5em;}
+ 
+div.search .input-group .input-group-addon {line-height: 1.75; }
+ 
+ 
+ 
+ 
+/*************** MAIN & CONTAINER-FLUID ***************/
+  
 .main .container-fluid input[type="file"] { cursor: pointer; font-size: 0.9em; margin-bottom: 1em; margin-top: 5px;}
 .main .container-fluid .chosen-container {font-size: 0.9em !important;}
 .main .container-fluid input.btn-primary[type="submit"] { padding: 12px 16px; font-size: 1em; text-align: left;}
 .main .container-fluid .label.label-success { padding: 0.3em 0.75em; font-size: 0.95em; font-weight: 500; line-height: 1; color: #fff; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 1px;}
 .main .container-fluid .chosen-container-single .chosen-single { line-height: 1.75rem; height: 1.75rem; }
-.main .container-fluid .form-inline .select-group .chosen-single span {padding-top: 0; }
-.main .container-fluid .form-inline .form-group.comment-group {width: 100%;}
+.main .container-fluid  .select-group .chosen-single span {padding-top: 0; }
+.main .container-fluid  .form-group.comment-group {width: 100%;}
 .main .container-fluid .title-bar {border-bottom: 0; margin-bottom: 0; }
-.main .container-fluid .form-inline textarea.form-control { height: 8em; max-width: 100%; min-width: 100%; text-transform: initial; }
-
-
-
-
-
-
+.main .container-fluid  textarea.form-control { height: 8em; max-width: 100%; min-width: 100%; text-transform: initial; }
+ 
+ 
+ 
+ 
+ 
+ 
 /*************** FRIENDLY ERRORS ***************/
 .title-bar h2 span.originalError {padding-left: 2em; color: #4b4b4b;}
 .main .container-fluid .striped {padding: 1em; margin: 1em 1em 2em 0;}
 .main .container-fluid div.striped { background-color: #f9f6ef;}
-
-
-
+ 
+/*************** TEMPLATES ***************/
+.template-tag { border: 1px solid #AFF; background: #EFF; border-radius: 3px; box-shadow: 0 0 3px #111; padding: 3px; cursor: pointer; margin: 5px; line-height: 40px; white-space: nowrap; }
+.template-parent-tag { border: 1px solid #AAA; background: #FAFAFA; box-shadow: 0 0 3px #111; border-radius: 3px; padding: 5px; width: 121px; margin: 5px; }
+    .template-parent-tag [type="text"] { width: 100%; margin-bottom: 1px; }
+.template-preview { border: 1px solid #CCC; border-radius: 3px; padding: 35px 10px 10px 10px; margin-top: 15px; box-shadow: 1px 1px 3px #999; }
+    .template-preview::before { content:'Preview'; font-weight: bold; position: absolute; margin-top: -25px; }
+ 
 /*************** @MEDIA QUERIES ***************/
-
+ 
 @media (min-width: 320px) {
     .col-nested { width: 100%;}
     .col-nested div.col-lg-6 {padding-left: 0; padding-right: 0;}
     .col-unnested { width: 100%; }
     .col-nested div.col-lg-6 { width: 100%; padding-right: 0;}
 }
-
+ 
 @media (min-width: 768px) {
     .container { width: 95%; margin: 0 auto;}
     .navbar-right {margin-right: 0;}
@@ -437,35 +441,35 @@ div.messageTypes { padding-right: 16px; }
     .col-nested div.col-lg-6 { width: 100%; }
     .main .container-fluid form > div:nth-of-type(3) {margin-top: 2em;}
 }
-
+ 
 @media (min-width: 992px) {
     .main .container-fluid form > div:nth-of-type(3) {margin-top: 0;}
 }
-
+ 
 @media (min-width: 1500px) {
     .searchSidebar.col-lg-2 { width: 20%; }
     .searchMain.col-lg-10 { width: 80%; }
 }
-
+ 
 @media (max-width: 1499px) {
     .table > tbody > tr > td {font-size: 0.9em; }
 }
-
+ 
 @media (min-width: 1920px) {
     .searchSidebar.col-lg-2 { width: 18%; }
     .searchMain.col-lg-10 { width: 82%; }
     .staging-container {font-size: 1em;}
     .chosen-container {font-size: 1em;}
-    .form-inline .form-control { height: 2rem; }
-    .form-inline .input-group .input-group-addon { height: 2rem; }
+     .form-control { height: 2rem; }
+     .input-group .input-group-addon { height: 2rem; }
     .select-group {font-size: 1rem;}
     .chosen-container-single .chosen-single { height: 2rem; }
-    .form-inline .input-group .input-group-addon { padding: 0.5em; }
-    .form-inline .input-group.money .input-group-addon { line-height: 1; }
-    .form-inline .select-group .chosen-single span { padding-top: 0; }
+     .input-group .input-group-addon { padding: 0.5em; }
+     .input-group.money .input-group-addon { line-height: 1; }
+     .select-group .chosen-single span { padding-top: 0; }
     .chosen-container-single .chosen-single div { padding-top: 0.25em; }
 }
-
+ 
 @media (max-width: 1280px) {
     .sidebar a.btn { font-size: 1.15em; width: 60%; margin: 1em auto; display: block; }
     .messageType-buttons a.btn.btn-success { margin: 1em auto; }
@@ -473,13 +477,13 @@ div.messageTypes { padding-right: 16px; }
     div.search-messageTypes {font-size: 0.85rem;}
     .navbar-nav .navbar-greeting {display: none;}
 }
-
+ 
 @media (min-width: 1200px) {
     .col-nested { width: 66.66666667%; }
     .col-unnested { width: 33.33333333%; }
     .col-nested div.col-lg-6 { width: 50%; }
 }
-
+ 
 @media (max-width: 767px) {
     .toggle-title { float: right; padding: 16px 8px 0 0; color: #fff; }
     .body-content {padding-right: 15px;}
@@ -501,7 +505,7 @@ div.messageTypes { padding-right: 16px; }
     .main .container-fluid form > div:nth-of-type(3) {margin-top: 0;}
     .panel-heading[data-toggle="collapse"], .panel-heading[data-toggle="collapse"] label {font-size:1em;}
 }
-
+ 
 @media (max-width: 992px) {
     .navbar-nav { font-size: 0.9em; }
     .nav > li > a { padding: 16px 20px 0; }

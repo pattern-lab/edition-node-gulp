@@ -1,16 +1,20 @@
 <div class="form-group checkbox-group">
 	<fieldset>
-		<legend>Group Title</legend>
+		<legend>What's for lunch?</legend>
 		<div class="checkbox-controls">
 			<label>
-				Check Box
-				<input name='fooBar' type="checkbox" class="form-control"  value="true" />
+				<input name='shushiBar' type="checkbox" class="form-control"  value="true" />
 				<!--
-						Razor alternative: @Html.CheckBoxFor(x => Model.fooBar, new { @class = "form-control" })
+						Razor alternative: @Html.CheckBoxFor(x => Model.sushiBar, new { @class = "form-control" })
 				-->
+				Sushi
+			</label>
+			<label>
+				<input name='saladBar' type="checkbox" class="form-control" value="false" />
+				Salad
 			</label>
 		</div>
-	<!-- 
+		<!-- 
 			Razor Validation: @Html.ICONValidationMessageFor(x => x.fooBar)
 		-->
 	</fieldset>
