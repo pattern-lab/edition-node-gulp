@@ -1,0 +1,29 @@
+<div class="form-group button-group">
+	<!-- Razor Logic 
+	@if (Model.SuccessfullySaved)
+	{
+	-->
+		<div class="success-message">
+			<i class="glyphicon glyphicon-ok"></i> Save successful
+		</div>
+	<!--
+	}
+	else
+	{
+		@Html.ValidationMessage("Save")
+		@if (!Model.IsRelayMessageValid)
+		{
+		-->
+			<button type="submit" class="btn btn-primary">Save and Send</button>
+			<button type="button" class="btn btn-next">Next</button>
+		<!--
+		}
+		if (Model.IsRelayMessageValid)
+		{
+		-->
+			<div class="success-message"><i class="glyphicon glyphicon-ok"></i> Message already processed and cannot be edited.</div>
+		<!--
+		}
+	}
+	-->
+</div>

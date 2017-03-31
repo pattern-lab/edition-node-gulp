@@ -1,0 +1,13 @@
+<div class="form-group input-group date">
+	<label for="fooBar">Datepicker</label>
+	<input id="fooBar" name="fooBar" class="form-control" />
+	<!-- 
+			Razor Alternative:  
+					@Html.LabelFor(x => x.fooBar, "fooBar")
+					@Html.TextBoxFor(x => x.fooBar, "{0:MM/dd/yyyy}", new { @class = "form-control" })
+	-->
+	<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+	<!-- Razor validation
+			@Html.ICONValidationMessageFor(x => x.fooBar)
+	-->
+</div>

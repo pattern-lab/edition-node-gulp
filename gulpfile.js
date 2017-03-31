@@ -7,7 +7,8 @@ var gulp = require('gulp'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
   argv = require('minimist')(process.argv.slice(2)),
-  chalk = require('chalk');
+  chalk = require('chalk'),
+  concat = require('gulp-concat');
 
 /**
  * Normalize all paths to be plain, paths with no leading './',
@@ -52,7 +53,9 @@ gulp.task('pl-copy:favicon', function () {
 
 // Fonts copy
 gulp.task('pl-copy:font', function () {
-  return gulp.src('*', {cwd: normalizePath(paths().source.fonts)})
+  return gulp.src(
+        // normalizePath(paths().source.fonts), 
+        'node_modules/bootstrap/dist/fonts/*')
     .pipe(gulp.dest(normalizePath(paths().public.fonts)));
 });
 
@@ -61,6 +64,21 @@ gulp.task('pl-copy:css', function () {
   return gulp.src(normalizePath(paths().source.css) + '/*.css')
     .pipe(gulp.dest(normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
+});
+
+gulp.task('pl-concat:css', function() {
+  return gulp.src([
+      'node_modules/bootstrap/dist/css/bootstrap.css',
+      'node_modules/bootstrap/dist/css/bootstrap-theme.css',
+      'node_modules/chosen-npm/public/chosen.css',
+      'node_modules/datatables/media/css/jquery.dataTables.css',
+      'node_modules/jqueryui/jquery-ui.css',
+      'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css',
+      normalizePath(paths().source.css) + '/icon-style.css'
+      ]
+    )
+  .pipe(concat("style.css"))
+  .pipe(gulp.dest(normalizePath(paths().public.css)));
 });
 
 // Styleguide Copy everything but css
@@ -121,7 +139,8 @@ gulp.task('pl-assets', gulp.series(
   'pl-copy:font',
   'pl-copy:css',
   'pl-copy:styleguide',
-  'pl-copy:styleguide-css'
+  'pl-copy:styleguide-css',
+  'pl-concat:css'
 ));
 
 gulp.task('patternlab:version', function (done) {

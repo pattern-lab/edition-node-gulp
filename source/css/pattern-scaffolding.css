@@ -52,3 +52,20 @@
   font-size: 90%;
   line-height: 1;
 }
+
+.sg-tabs-panel {min-height: 12em !important;}
+
+h3.sg-pattern-title {font-family: "Roboto Slab", "HelveticaNeue", Arial, Helvetica, sans-serif !important; font-size: 0.95rem !important;}
+.sg-pattern-title a {font-weight: 400 !important;}
+.sg-main {padding: 1rem;}
+
+form.molecule-page, form.organism-page {font-size: 0.9em;}
+
+.form-control {box-shadow: none; -webkit-box-shadow: none;}
+@media (min-width: 992px) {
+  .main .container-fluid form > div:nth-of-type(3) {
+      margin-top: 1em;
+  }
+}
+
+

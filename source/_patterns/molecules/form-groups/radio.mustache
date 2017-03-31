@@ -1,0 +1,24 @@
+<div class="form-group radio-group">
+	<fieldset>
+		<legend>Radio Button Group:</legend>
+		<div class="radio-controls">
+			<label>
+				<input type="radio" name="fooBar" class="form-control" value="No"/>
+				<!-- Razor Alternative:
+					@Html.RadioButtonFor(x => x.fooBar, false, new { @class = "form-control" })
+				-->
+				No
+	 		</label>
+	 		<label>
+	 			<input type="radio" name="fooBar" class="form-control" value="Yes" />
+	 			<!-- Razor Alternative : 
+	 			@Html.RadioButtonFor(x => x.fooBar, true, new { @class = "form-control" })
+	 			-->
+	 			 Yes
+			</label>
+		</div>
+	</fieldset>
+	<!-- Razor validation: 
+		@Html.ICONValidationMessageFor(x => x.fooBar)
+	-->
+</div>
