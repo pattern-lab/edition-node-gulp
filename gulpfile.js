@@ -235,6 +235,7 @@ gulp.task('patternlab:connect', gulp.series(function (done) {
       // Ignore all HTML files within the templates folder
       blacklist: ['/index.html', '/', '/?*']
     },
+    open: (argv.noopen ? false : true),
     notify: {
       styles: [
         'display: none',
