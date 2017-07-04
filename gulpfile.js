@@ -160,7 +160,7 @@ gulp.task('patternlab:installplugin', function (done) {
 ******************************************************/
 // watch task utility functions
 function getSupportedTemplateExtensions() {
-  var engines = require('./node_modules/patternlab-node/core/lib/pattern_engines');
+  var engines = require('patternlab-node/core/lib/pattern_engines');
   return engines.getSupportedFileExtensions();
 }
 function getTemplateWatches() {
