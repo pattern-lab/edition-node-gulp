@@ -9,7 +9,8 @@
     "minimist": "^1.2.0",
     "patternlab-node": "^2.0.0",
     "styleguidekit-assets-default": "^3.0.0",
-    "styleguidekit-mustache-default": "^3.0.0"
+    "styleguidekit-mustache-default": "^3.0.0",
+    "snyk": "^1.38.3"
   },
   "keywords": [
     "Pattern Lab",
@@ -27,10 +28,13 @@
   "scripts": {
     "start": "gulp patternlab:serve",
     "postinstall": "node scripts/postinstall.js",
-    "gulp": "gulp -- "
+    "gulp": "gulp -- ",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "license": "MIT",
   "engines": {
     "node": ">=5.0"
-  }
+  },
+  "snyk": true
 }
