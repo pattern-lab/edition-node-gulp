@@ -7,7 +7,8 @@ var gulp = require('gulp'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
   argv = require('minimist')(process.argv.slice(2)),
-  chalk = require('chalk');
+  chalk = require('chalk'),
+  _ = require('lodash');
 
 /**
  * Normalize all paths to be plain, paths with no leading './',
@@ -33,16 +34,16 @@ function normalizePath() {
  * COPY TASKS - stream assets from source to destination
 ******************************************************/
 // JS copy
-gulp.task('pl-copy:js', function () {
-  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
-    .pipe(gulp.dest(normalizePath(paths().public.js)));
-});
+// gulp.task('pl-copy:js', function () {
+//   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
+//     .pipe(gulp.dest(normalizePath(paths().public.js)));
+// });
 
-// Images copy
-gulp.task('pl-copy:img', function () {
-  return gulp.src('**/*.*',{cwd: normalizePath(paths().source.images)} )
-    .pipe(gulp.dest(normalizePath(paths().public.images)));
-});
+// // Images copy
+// gulp.task('pl-copy:img', function () {
+//   return gulp.src('**/*.*',{cwd: normalizePath(paths().source.images)} )
+//     .pipe(gulp.dest(normalizePath(paths().public.images)));
+// });
 
 // Favicon copy
 gulp.task('pl-copy:favicon', function () {
@@ -50,18 +51,18 @@ gulp.task('pl-copy:favicon', function () {
     .pipe(gulp.dest(normalizePath(paths().public.root)));
 });
 
-// Fonts copy
-gulp.task('pl-copy:font', function () {
-  return gulp.src('*', {cwd: normalizePath(paths().source.fonts)})
-    .pipe(gulp.dest(normalizePath(paths().public.fonts)));
-});
+// // Fonts copy
+// gulp.task('pl-copy:font', function () {
+//   return gulp.src('*', {cwd: normalizePath(paths().source.fonts)})
+//     .pipe(gulp.dest(normalizePath(paths().public.fonts)));
+// });
 
-// CSS Copy
-gulp.task('pl-copy:css', function () {
-  return gulp.src(normalizePath(paths().source.css) + '/*.css')
-    .pipe(gulp.dest(normalizePath(paths().public.css)))
-    .pipe(browserSync.stream());
-});
+// // CSS Copy
+// gulp.task('pl-copy:css', function () {
+//   return gulp.src(normalizePath(paths().source.css) + '/*.css')
+//     .pipe(gulp.dest(normalizePath(paths().public.css)))
+//     .pipe(browserSync.stream());
+// });
 
 // Styleguide Copy everything but css
 gulp.task('pl-copy:styleguide', function () {
@@ -96,13 +97,29 @@ function getConfiguredCleanOption() {
   return config.cleanPublic;
 }
 
+function getPathsToCopy() {
+  const pathsToCopy = _.cloneDeep(paths());
+  delete pathsToCopy.source.root;
+  delete pathsToCopy.source.patterns;
+  delete pathsToCopy.source.data;
+  delete pathsToCopy.source.meta;
+  delete pathsToCopy.source.annotations;
+  delete pathsToCopy.source.styleguide;
+  delete pathsToCopy.source.patternlabFiles;
+  return pathsToCopy;
+}
+
 /**
  * Performs the actual build step. Accomodates both async and sync
  * versions of Pattern Lab.
  * @param {function} done - Gulp done callback
  */
 function build(done) {
-  const buildResult = patternlab.build(() => {}, getConfiguredCleanOption());
+  const buildResult = patternlab.build(
+    () => {},
+    getConfiguredCleanOption(),
+    getPathsToCopy()
+  );
 
   // handle async version of Pattern Lab
   if (buildResult instanceof Promise) {
@@ -114,15 +131,15 @@ function build(done) {
   return null;
 }
 
-gulp.task('pl-assets', gulp.series(
-  'pl-copy:js',
-  'pl-copy:img',
-  'pl-copy:favicon',
-  'pl-copy:font',
-  'pl-copy:css',
-  'pl-copy:styleguide',
-  'pl-copy:styleguide-css'
-));
+// gulp.task('pl-assets', gulp.series(
+//   'pl-copy:js',
+//   'pl-copy:img',
+//   'pl-copy:favicon',
+//   'pl-copy:font',
+//   'pl-copy:css',
+//   'pl-copy:styleguide',
+//   'pl-copy:styleguide-css'
+// ));
 
 gulp.task('patternlab:version', function (done) {
   patternlab.version();
@@ -148,7 +165,7 @@ gulp.task('patternlab:loadstarterkit', function (done) {
   done();
 });
 
-gulp.task('patternlab:build', gulp.series('pl-assets', build));
+gulp.task('patternlab:build', gulp.series(build));
 
 gulp.task('patternlab:installplugin', function (done) {
   patternlab.installplugin(argv.plugin);
@@ -189,29 +206,29 @@ function reloadCSS(done) {
 
 function watch() {
   const watchers = [
-    {
-      name: 'CSS',
-      paths: [normalizePath(paths().source.css, '**', '*.css')],
-      config: { awaitWriteFinish: true },
-      tasks: gulp.series('pl-copy:css', reloadCSS)
-    },
-    {
-      name: 'Styleguide Files',
-      paths: [normalizePath(paths().source.styleguide, '**', '*')],
-      config: { awaitWriteFinish: true },
-      tasks: gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reloadCSS)
-    },
+    // {
+    //   name: 'CSS',
+    //   paths: [normalizePath(paths().source.css, '**', '*.css')],
+    //   config: { awaitWriteFinish: true },
+    //   tasks: gulp.series('pl-copy:css', reloadCSS)
+    // },
+    // {
+    //   name: 'Styleguide Files',
+    //   paths: [normalizePath(paths().source.styleguide, '**', '*')],
+    //   config: { awaitWriteFinish: true },
+    //   tasks: gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reloadCSS)
+    // },
     {
       name: 'Source Files',
       paths: [
         normalizePath(paths().source.patterns, '**', '*.json'),
-        normalizePath(paths().source.patterns, '**', '*.md'),
-        normalizePath(paths().source.data, '**', '*.json'),
-        normalizePath(paths().source.fonts, '**', '*'),
-        normalizePath(paths().source.images, '**', '*'),
-        normalizePath(paths().source.js, '**', '*'),
-        normalizePath(paths().source.meta, '**', '*'),
-        normalizePath(paths().source.annotations, '**', '*')
+        normalizePath(paths().source.patterns, '**', '*.md')
+        // normalizePath(paths().source.data, '**', '*.json'),
+        // normalizePath(paths().source.fonts, '**', '*'),
+        // normalizePath(paths().source.images, '**', '*'),
+        // normalizePath(paths().source.js, '**', '*'),
+        // normalizePath(paths().source.meta, '**', '*'),
+        // normalizePath(paths().source.annotations, '**', '*')
       ].concat(getTemplateWatches()),
       config: { awaitWriteFinish: true },
       tasks: gulp.series(build, reload)
