@@ -10,8 +10,8 @@
     "minimist": "^1.2.0",
     "patternlab-node": "^2.0.0",
     "patternlab-node-cli": "pattern-lab/patternlab-node-cli",
-    "styleguidekit-assets-default": "^3.0.0",
-    "styleguidekit-mustache-default": "^3.0.0"
+    "@pattern-lab/styleguidekit-assets-default": "^4.0.0-alpha.1",
+    "@pattern-lab/styleguidekit-mustache-default": "^4.0.0-alpha.1"
   },
   "keywords": [
     "Pattern Lab",
