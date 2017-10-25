@@ -34,7 +34,7 @@ function normalizePath() {
 ******************************************************/
 // JS copy
 gulp.task('pl-copy:js', function () {
-  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
+  return gulp.src('**/*.js?(.map)', {cwd: normalizePath(paths().source.js)} )
     .pipe(gulp.dest(normalizePath(paths().public.js)));
 });
 
@@ -58,7 +58,7 @@ gulp.task('pl-copy:font', function () {
 
 // CSS Copy
 gulp.task('pl-copy:css', function () {
-  return gulp.src(normalizePath(paths().source.css) + '/*.css')
+  return gulp.src(normalizePath(paths().source.css) + '/*.css?(.map)')
     .pipe(gulp.dest(normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
 });
