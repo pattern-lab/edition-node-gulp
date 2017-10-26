@@ -52,7 +52,7 @@ gulp.task('pl-copy:favicon', function () {
 
 // Fonts copy
 gulp.task('pl-copy:font', function () {
-  return gulp.src('*', {cwd: normalizePath(paths().source.fonts)})
+  return gulp.src('**/*.*', {cwd: normalizePath(paths().source.fonts)})
     .pipe(gulp.dest(normalizePath(paths().public.fonts)));
 });
 
