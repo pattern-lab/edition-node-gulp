@@ -8,7 +8,7 @@
     "@pattern-lab/patternlab-node": "^3.0.0-alpha.5",
     "@pattern-lab/styleguidekit-assets-default": "^4.0.0-alpha.2",
     "@pattern-lab/styleguidekit-mustache-default": "^4.0.0-alpha.1",
-    "gulp": "gulpjs/gulp#4.0"
+    "gulp": "^3.9.1"
   },
   "keywords": [
     "Pattern Lab",
@@ -24,8 +24,6 @@
   "bugs": "https://github.com/pattern-lab/edition-node-gulp/issues",
   "author": "Brian Muenzenmeyer",
   "scripts": {
-    "start": "gulp patternlab:serve",
-    "postinstall": "node scripts/postinstall.js",
     "gulp": "gulp -- "
   },
   "license": "MIT",
