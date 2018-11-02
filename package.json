@@ -8,8 +8,9 @@
     "@pattern-lab/patternlab-node": "^3.0.0-alpha.8",
     "@pattern-lab/styleguidekit-assets-default": "^4.0.0-alpha.3",
     "@pattern-lab/styleguidekit-mustache-default": "^4.0.0-alpha.1",
-    "gulp": "^3.9.1",
-    "minimist": "^1.2.0"
+    "gulp": "^4.0.0",
+    "minimist": "^1.2.0",
+    "snyk": "^1.106.0"
   },
   "keywords": [
     "Pattern Lab",
@@ -25,10 +26,13 @@
   "bugs": "https://github.com/pattern-lab/edition-node-gulp/issues",
   "author": "Brian Muenzenmeyer",
   "scripts": {
-    "gulp": "gulp -- "
+    "gulp": "gulp -- ",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "license": "MIT",
   "engines": {
     "node": ">=6.0"
-  }
+  },
+  "snyk": true
 }
