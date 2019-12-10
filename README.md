@@ -1,6 +1,4 @@
-![Pattern Lab Logo](/patternlab.png "Pattern Lab Logo")
-
-![current release](https://img.shields.io/github/release/pattern-lab/edition-node-gulp.svg) ![license](https://img.shields.io/github/license/pattern-lab/edition-node-gulp.svg) [![Join the chat at Gitter](https://badges.gitter.im/pattern-lab/node.svg)](https://gitter.im/pattern-lab/node)
+[📢 Archived in favor of https://github.com/pattern-lab/patternlab-node](https://github.com/pattern-lab/patternlab-node)
 
 # Pattern Lab Node - Gulp Edition
 
